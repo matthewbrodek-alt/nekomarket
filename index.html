@@ -3,12 +3,14 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>NEKOmarket Boutique</title>
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&family=Inter:wght@400;500;600&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link rel="stylesheet" href="style.css">
+
     <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
@@ -63,123 +65,95 @@
                 "error-container": "#ffdad6",
                 "on-secondary": "#ffffff"
             },
-            "borderRadius": {
-                "DEFAULT": "0.5rem",
-                "lg": "0.5rem",
-                "xl": "0.75rem",
-                "full": "9999px"
-            },
             "fontFamily": {
                 "headline": ["Plus Jakarta Sans"],
                 "body": ["Inter"],
                 "label": ["Inter"],
-                "script": ["cursive"]
+                "montserrat": ["Montserrat"]
             }
           }
         }
       }
     </script>
 </head>
-<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container" data-mode="connect">
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
 
-<nav class="fixed top-0 w-full z-50 bg-[#f9f9f9]/80 backdrop-blur-md">
-    <div class="flex justify-between items-start px-12 py-6 max-w-[1440px] mx-auto">
-        <div class="flex flex-col gap-1">
-            <span class="text-2xl font-['Montserrat'] font-bold uppercase logo-underline border-[#94464f] text-[#94464f]">NEKOMARKET</span>
-            <span class="text-[10px] uppercase tracking-widest text-secondary font-label">Ваш помощник в аренде пушистого друга</span>
-        </div>
-        <div class="hidden lg:flex gap-10 items-center pt-2">
-            <a class="text-[#94464f] font-bold border-b-2 border-[#94464f] font-['Plus_Jakarta_Sans'] tracking-tight" href="#">Boutique</a>
-            <a class="text-[#5f5e5e] hover:text-[#94464f] font-['Plus_Jakarta_Sans'] tracking-tight transition-colors" href="#">Our Felines</a>
-            <a class="text-[#5f5e5e] hover:text-[#94464f] font-['Plus_Jakarta_Sans'] tracking-tight transition-colors" href="#">About Us</a>
-            <a class="text-[#5f5e5e] hover:text-[#94464f] font-['Plus_Jakarta_Sans'] tracking-tight transition-colors" href="#">Phuket Location</a>
-            <span class="material-symbols-outlined text-primary ml-4">pets</span>
-        </div>
-        <div class="flex items-start gap-6">
-            <button class="bg-primary text-white px-8 py-3 rounded-lg font-bold shadow-md hover:bg-[#7a3941] transition-all">Rent a Cat</button>
-            <div class="w-20 h-auto -mt-6">
-                <img alt="Peeking cat" class="w-full" src="cat_profile_0.png">
+    <nav class="fixed top-0 w-full z-50 bg-[#f9f9f9]/80 backdrop-blur-md">
+        <div class="flex justify-between items-start px-12 py-6 max-w-[1440px] mx-auto">
+            <div class="flex flex-col gap-1">
+                <span class="text-2xl font-montserrat font-bold uppercase logo-underline text-primary">NEKOMARKET</span>
+                <span class="text-[10px] uppercase tracking-widest text-secondary font-medium">Ваш помощник в аренде пушистого друга</span>
             </div>
-        </div>
-    </div>
-</nav>
-
-<header class="relative w-full h-[1024px] overflow-hidden flex flex-col items-center pt-24">
-    <div class="absolute inset-0 z-0">
-        <img class="w-full h-full object-cover" src="cat_hero_1.png">
-    </div>
-    <div class="relative z-10 text-center select-none mt-[122px]">
-        <div class="flex flex-col items-center">
-            <h1 class="text-[14rem] font-black font-['Montserrat'] text-white hero-title mix-blend-overlay opacity-90">NEKO</h1>
-            <h1 class="text-[10rem] font-black font-['Montserrat'] text-white hero-title -mt-24 opacity-80">market</h1>
-        </div>
-    </div>
-    <div class="absolute bottom-12 left-12 z-20 max-w-sm">
-        <p class="text-white font-headline text-lg italic border-l-2 border-primary-container pl-4 drop-shadow-md">
-            "Finding the perfect companion for your afternoon soul-soothing."
-        </p>
-    </div>
-</header>
-
-<section class="py-24 px-12 bg-white">
-    <div class="max-w-[1440px] mx-auto">
-        <div class="mb-16 text-center">
-            <h2 class="text-5xl font-black font-headline text-on-surface mb-4">Наши сотрудники</h2>
-        </div>
-        <div class="relative max-w-5xl mx-auto pt-20 pb-40">
-            <div class="bg-white p-4 shadow-xl border border-gray-100 rounded-lg">
-                <img alt="Our feline employees collage" class="w-full h-auto object-contain" src="cat_collage_2.png">
+            <div class="hidden lg:flex gap-10 items-center pt-2">
+                <a class="text-primary font-bold border-b-2 border-primary font-headline" href="#">Boutique</a>
+                <a class="text-secondary hover:text-primary transition-colors font-headline" href="#">Our Felines</a>
+                <a class="text-secondary hover:text-primary transition-colors font-headline" href="#">About Us</a>
+                <a class="text-secondary hover:text-primary transition-colors font-headline" href="#">Phuket Location</a>
+                <span class="material-symbols-outlined text-primary ml-4">pets</span>
             </div>
-            <div class="absolute left-0 bottom-4 md:left-[10%] md:bottom-[5%] flex flex-col items-center">
-                <svg class="w-24 h-24 mb-2 pointer-line" viewBox="0 0 100 100"><path d="M50,0 L50,60 L20,100"></path></svg>
-                <div class="bg-white/90 backdrop-blur px-6 py-3 rounded-full shadow-lg border border-primary/10">
-                    <p class="font-bold text-sm whitespace-nowrap">Пьетро санчез младший <span class="text-primary ml-2">1 месяц</span></p>
-                </div>
-            </div>
-            <div class="absolute left-1/2 -translate-x-1/2 bottom-0 md:bottom-[-10%] flex flex-col items-center">
-                <svg class="w-24 h-24 mb-2 pointer-line" viewBox="0 0 100 100"><path d="M50,0 L50,100"></path></svg>
-                <div class="bg-white/90 backdrop-blur px-6 py-3 rounded-full shadow-lg border border-primary/10">
-                    <p class="font-bold text-sm whitespace-nowrap">Владимир <span class="text-primary ml-2">4 месяца</span></p>
-                </div>
-            </div>
-            <div class="absolute right-0 bottom-10 md:right-[15%] md:bottom-[15%] flex flex-col items-center">
-                <svg class="w-24 h-24 mb-2 pointer-line" viewBox="0 0 100 100"><path d="M50,0 L50,50 L80,100"></path></svg>
-                <div class="bg-white/90 backdrop-blur px-6 py-3 rounded-full shadow-lg border border-primary/10">
-                    <p class="font-bold text-sm whitespace-nowrap">Арсений <span class="text-primary ml-2">3 месяца</span></p>
+            <div class="flex items-start gap-6">
+                <button class="bg-primary text-white px-8 py-3 rounded-lg font-bold shadow-md hover:bg-[#7a3941] transition-all">Rent a Cat</button>
+                <div class="w-20 -mt-6">
+                    <img alt="Peeking cat" class="w-full" src="image_57aa2b.png">
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </nav>
 
-<section class="py-32 px-12 bg-white">
-    <div class="max-w-[1440px] mx-auto text-center">
-        <span class="text-primary font-bold uppercase tracking-[0.3em] text-sm mb-6 block">The Concept</span>
-        <h2 class="text-6xl font-black font-headline mb-10">Boutique Feline Experience</h2>
-        <div class="max-w-3xl mx-auto space-y-6">
-            <p class="text-xl text-on-surface leading-relaxed italic">
-                NEKOmarket — это не просто аренда, это возможность прикоснуться к миру премиального ухода и искренней привязанности.
-            </p>
-            <p class="text-secondary leading-loose">
-                Наш подход основан на философии "Slow Living". Мы подбираем пушистого партнера, который идеально дополнит вашу атмосферу в отпуске на Пхукете.
+    <header class="relative w-full h-[100vh] min-h-[800px] overflow-hidden flex flex-col items-center justify-center pt-24">
+        <div class="absolute inset-0 z-0">
+            <img class="w-full h-full object-cover" src="image_5758a6.jpg">
+        </div>
+        <div class="relative z-10 text-center select-none mt-20">
+            <div class="flex flex-col items-center">
+                <h1 class="text-[14rem] font-black font-montserrat text-white leading-[0.8] opacity-90 mix-blend-overlay">NEKO</h1>
+                <h1 class="text-[10rem] font-black font-montserrat text-white leading-[0.8] opacity-80">market</h1>
+            </div>
+        </div>
+        <div class="absolute bottom-12 left-12 z-20 max-w-sm">
+            <p class="text-white font-headline text-lg italic border-l-2 border-primary-container pl-4 drop-shadow-md">
+                "Finding the perfect companion for your afternoon soul-soothing."
             </p>
         </div>
-    </div>
-</section>
+    </header>
 
-<footer class="w-full py-20 px-12 bg-surface-container border-t border-outline-variant/30">
-    <div class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        <div class="flex flex-col gap-4">
-            <div class="font-['Montserrat'] font-bold text-secondary text-2xl tracking-tighter">NEKOmarket</div>
-            <p class="text-sm tracking-wide text-secondary">© 2024 NEKOmarket Boutique. Curated in Phuket.</p>
+    <section class="py-24 px-12 bg-white">
+        <div class="max-w-[1440px] mx-auto">
+            <div class="mb-16 text-center">
+                <h2 class="text-5xl font-black font-headline text-on-surface mb-4">Наши сотрудники</h2>
+            </div>
+            <div class="relative max-w-5xl mx-auto pt-10 pb-20">
+                <div class="bg-white p-4 shadow-2xl border border-gray-100 rounded-xl overflow-hidden">
+                    <img alt="Our feline employees" class="w-full h-auto object-contain" src="image_57aa69.png">
+                </div>
+                
+                <div class="absolute left-0 -bottom-5 flex flex-col items-center">
+                    <div class="bg-white/90 backdrop-blur px-6 py-3 rounded-full shadow-lg border border-primary/10">
+                        <p class="font-bold text-sm">Пьетро санчез младший <span class="text-primary ml-2">1 месяц</span></p>
+                    </div>
+                </div>
+                <div class="absolute right-0 -bottom-5 flex flex-col items-center">
+                    <div class="bg-white/90 backdrop-blur px-6 py-3 rounded-full shadow-lg border border-primary/10">
+                        <p class="font-bold text-sm">Арсений <span class="text-primary ml-2">3 месяца</span></p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="flex flex-wrap gap-8 md:justify-end">
-            <a class="text-sm tracking-wide text-secondary hover:text-primary" href="#">Terms of Service</a>
-            <a class="text-sm tracking-wide text-secondary hover:text-primary" href="#">Privacy Policy</a>
-            <a class="text-sm tracking-wide text-primary underline font-bold" href="#">Contact</a>
+    </section>
+
+    <footer class="w-full py-20 px-12 bg-surface-container border-t border-outline-variant/30">
+        <div class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div class="flex flex-col gap-4">
+                <div class="font-montserrat font-bold text-secondary text-2xl tracking-tighter">NEKOmarket</div>
+                <p class="text-sm tracking-wide text-secondary">© 2024 NEKOmarket Boutique. Curated in Phuket.</p>
+            </div>
+            <div class="flex flex-wrap gap-8 md:justify-end">
+                <a class="text-sm tracking-wide text-secondary hover:text-primary" href="#">Terms</a>
+                <a class="text-sm tracking-wide text-secondary hover:text-primary" href="#">Privacy</a>
+                <a class="text-sm tracking-wide text-primary underline font-bold" href="#">Contact</a>
+            </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
 </body>
 </html>
