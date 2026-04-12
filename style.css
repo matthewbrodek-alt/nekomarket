@@ -1,184 +1,150 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;500;600&display=swap');
-
-/* Подключение шрифтов (для NEKO и market) */
-@font-face {
-    font-family: 'AvenirNextBlack';
-    src: url('AvenirNext-Black.ttf'); /* Замени на путь к своему файлу */
-}
-
-@font-face {
-    font-family: 'BrushScriptMT';
-    src: url('BrushScriptMT.ttf'); /* Замени на путь к своему файлу */
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;600&display=swap');
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-    background-color: #e5e5e5;
+    background-color: #f0f0f0;
     display: flex;
     justify-content: center;
     font-family: 'Inter', sans-serif;
-    color: #1a1a1a;
 }
 
 .app-container {
     width: 450px;
-    background-color: #f7f8fa;
+    background-color: #fff;
     position: relative;
-    min-height: 100vh;
     overflow: hidden;
 }
 
-/* --- Header --- */
+/* --- Исправленная Шапка --- */
 .header {
-    padding: 30px 25px 0;
+    display: flex;
+    justify-content: space-between; /* Текст и кот по разным углам */
+    align-items: flex-start;
+    padding: 30px 20px;
     position: absolute;
-    top: 0;
-    z-index: 100;
+    width: 100%;
+    z-index: 10;
 }
 
-.header h1 {
+.header-left h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
-    letter-spacing: 0.05em;
     text-decoration: underline;
-    text-underline-offset: 4px;
-    margin-bottom: 8px;
 }
 
-.header p { font-size: 14px; line-height: 1.3; font-weight: 500; }
+.header-left p {
+    font-size: 13px;
+    margin-top: 5px;
+    line-height: 1.2;
+}
 
 .top-right-cat {
-    position: absolute;
-    top: 0;
-    right: -10px;
-    width: 130px;
-    height: 90px;
-    background: url('image_57aa2b.png') no-repeat right top;
+    width: 80px;
+    height: 60px;
+    background: url('image_57aa2b.png') no-repeat center;
     background-size: contain;
 }
 
-/* --- Hero (Опускаем и переворачиваем логотип) --- */
+/* --- Hero & Логотип --- */
 .hero {
-    height: 560px;
+    height: 550px;
     background: url('image_5758a6.jpg') no-repeat center top;
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
 }
 
-/* Элемент, который опускает логотип ниже */
-.hero-logo-container {
-    position: absolute;
-    top: 45px; /* Установил точное положение из макета, опустив ниже */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.hero-logo-wrapper {
+    text-align: center;
+    margin-top: -50px;
 }
 
 .logo-neko {
-    font-family: 'AvenirNextBlack', sans-serif;
-    font-size: 120px;
-    letter-spacing: -3px;
+    font-size: 110px;
+    font-weight: 900;
     color: white;
     line-height: 0.8;
 }
 
 .logo-market {
-    font-family: 'BrushScriptMT', cursive;
-    font-size: 110px;
+    font-size: 90px;
+    font-family: 'Brush Script MT', cursive;
     color: white;
-    transform: rotate(180deg); /* Переворачиваем как на макете */
-    line-height: 0.8;
-    margin-top: -15px; /* Коррекция отступа */
+    /* Написание задом наперед (отзеркаливание) */
+    transform: scaleX(-1); 
+    display: inline-block;
+    margin-top: 5px;
 }
 
-/* --- Employees (Чистая рамка без ушей) --- */
+/* --- Увеличенный Блок Сотрудников --- */
 .employees {
-    margin-top: -100px;
+    padding: 20px 0;
+    background: #fff;
+    margin-top: -60px;
     position: relative;
-    z-index: 10;
 }
 
 .employees h2 {
     text-align: center;
-    color: white;
     font-size: 16px;
-    margin-bottom: 20px;
-    font-weight: 500;
+    margin-bottom: 15px;
 }
 
-.cats-bar-wrapper {
-    width: 88%;
+.cats-bar-big {
+    width: 92%; /* Сделали шире */
     margin: 0 auto;
-    position: relative;
 }
 
-/* Чистая рамка: убираем тени и лишние отступы */
-.cats-bar-inner {
-    height: 85px;
-    background: white; /* Фон рамки */
-    border: 6px solid white; /* Белая обводка */
-    border-radius: 12px;
-    overflow: hidden; /* Обрезает все, что выходит за рамку */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.cats-frame {
+    height: 120px; /* Увеличили высоту в красном прямоугольнике */
+    border: 8px solid #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    background: #000;
 }
 
-.cats-bar-inner img {
-    height: 100%; /* Картинка image_57aa69.png занимает всю высоту рамки */
-    width: auto;
-}
-
-/* Линии-указатели */
-.lines-svg {
-    position: absolute;
-    top: 75px;
-    left: 0;
+.cats-frame img {
     width: 100%;
-    height: 180px;
-    z-index: -1;
+    height: 100%;
+    object-fit: contain;
 }
 
-/* --- Подписи (Brush Effect) --- */
-.labels-container { height: 230px; position: relative; }
+/* --- Подписи --- */
+.labels-container { height: 180px; position: relative; }
 
-.brush-label {
+.label-box {
     position: absolute;
-    background: white;
-    padding: 6px 15px;
-    font-size: 12px;
+    background: #fff;
+    padding: 8px 12px;
+    font-size: 11px;
     font-weight: 600;
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.05);
-    clip-path: polygon(2% 0%, 98% 1%, 100% 15%, 97% 90%, 95% 100%, 5% 98%, 0% 85%, 3% 10%);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
 }
 
-.label-pietro { left: 15%; top: 170px; border-bottom: 1px dotted red; }
-.label-vladimir { left: 48%; top: 110px; }
-.label-arseniy { right: 8%; top: 50px; border-bottom: 1px dotted red; }
+.label-arseniy { right: 5%; top: 20px; }
+.label-vladimir { left: 40%; top: 70px; }
+.label-pietro { left: 5%; top: 120px; }
 
-/* --- Info Section --- */
-.info-section { padding: 30px 25px; }
+/* --- Нижняя часть --- */
+.info-section { padding: 25px; }
 
-.info-block { display: flex; justify-content: space-between; align-items: center; margin-bottom: 35px; }
+.info-block { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
 
-.cat-thumbs-up {
-    width: 130px;
-    height: 130px;
+.cat-thumb {
+    width: 100px;
+    height: 100px;
     background: url('image_5758ab.png') no-repeat center;
     background-size: contain;
 }
 
-.bottom-contact { display: flex; align-items: center; gap: 20px; }
+.footer-contact { display: flex; align-items: center; gap: 15px; }
 
-.cat-two-thumbs {
-    width: 160px;
-    height: 110px;
+.cat-double-thumb {
+    width: 120px;
+    height: 80px;
     background: url('image_57aa25.jpg') no-repeat center;
     background-size: contain;
 }
-
-.contact-text { font-size: 15px; font-weight: 600; line-height: 1.3; }
