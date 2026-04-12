@@ -3,26 +3,31 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-    background-color: #222; /* Темный фон страницы за пределами контента */
+    /* Установка изображения фоном всей страницы */
+    background-image: url('image_5758a6.jpg'); /* */
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; /* Фон не двигается при скролле */
+    
     display: flex;
     justify-content: center;
     font-family: 'Inter', sans-serif;
-    color: #fff; /* Весь текст теперь белый по умолчанию */
+    color: #fff;
+    min-height: 100vh;
 }
 
 .app-container {
     width: 450px;
-    background-color: transparent; /* Убран белый фон контейнера */
+    background-color: transparent; /* Полная прозрачность контента */
     position: relative;
-    overflow: hidden;
     min-height: 100vh;
 }
 
 /* --- Header --- */
 .header {
     padding: 25px;
-    position: absolute;
-    top: 0;
+    position: relative;
     z-index: 50;
 }
 
@@ -36,38 +41,34 @@ body {
 .top-right-cat {
     position: absolute;
     top: 0;
-    right: -245px;
+    right: -10px;
     width: 130px;
     height: 90px;
-    background: url('image_57aa2b.png') no-repeat right top;
+    background: url('image_57aa2b.png') no-repeat right top; /* */
     background-size: contain;
 }
 
-/* --- Hero (Центральный кот) --- */
-.hero {
-    height: 560px;
-    background: url('image_5758a6.jpg') no-repeat center top;
-    background-size: cover;
+/* --- Секция логотипа (теперь без фона картинки) --- */
+.hero-logo-section {
+    height: 350px; /* Уменьшил высоту, так как фон теперь общий */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .hero-logo {
-    color: white;
     text-align: center;
     font-family: 'Brush Script MT', cursive;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
 }
 
 .neko { font-size: 115px; display: block; line-height: 0.6; }
 .market { font-size: 95px; display: block; line-height: 0.6; margin-left: 40px; }
 
-/* --- Секция сотрудников --- */
+/* --- Сотрудники и стрелки --- */
 .employees { 
-    margin-top: -110px; 
     position: relative; 
-    background: transparent; 
+    padding-top: 20px;
 }
 
 .employees h2 {
@@ -85,7 +86,7 @@ body {
 
 .cats-bar {
     height: 80px;
-    background: #000 url('image_57aa69.png') no-repeat center;
+    background: #000 url('image_57aa69.png') no-repeat center; /* */
     background-size: 95%;
     border: 6px solid white;
     border-radius: 12px;
@@ -101,7 +102,6 @@ body {
     z-index: 5;
 }
 
-/* --- Подписи --- */
 .labels-container { 
     height: 250px; 
     position: relative; 
@@ -113,37 +113,48 @@ body {
     font-weight: 600;
     color: #fff;
     white-space: nowrap;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+    text-shadow: 1px 1px 4px rgba(0,0,0,1); /* Усиленная тень для читаемости на фоне */
 }
 
 .label-pietro { left: 5%; bottom: 10px; }
 .label-vladimir { left: 50%; bottom: 35px; transform: translateX(-50%); }
 .label-arseniy { right: 5%; bottom: 65px; }
 
-/* --- Инфо-секция --- */
+/* --- Нижняя инфо-секция --- */
 .info-section { 
-    padding: 30px 25px; 
-    background: transparent; /* Убран фон нижней части */
-    position: relative;
-    z-index: 10;
+    padding: 30px 25px;
 }
 
-.info-block { display: flex; justify-content: space-between; margin-bottom: 30px; }
+.info-block { 
+    display: flex; 
+    justify-content: space-between; 
+    margin-bottom: 30px; 
+    align-items: center;
+}
 
 .cat-thumbs-up {
     width: 130px;
     height: 130px;
-    background: url('image_5758ab.png') no-repeat center;
+    background: url('image_5758ab.png') no-repeat center; /* */
     background-size: contain;
 }
 
-.bottom-contact { display: flex; align-items: center; gap: 20px; }
+.bottom-contact { 
+    display: flex; 
+    align-items: center; 
+    gap: 20px; 
+    padding-bottom: 40px;
+}
 
 .cat-two-thumbs {
     width: 150px;
     height: 110px;
-    background: url('image_57aa25.jpg') no-repeat center;
+    background: url('image_57aa25.jpg') no-repeat center; /* */
     background-size: contain;
 }
 
-.contact-text { font-weight: 600; line-height: 1.4; text-shadow: 1px 1px 2px rgba(0,0,0,0.5); }
+.contact-text { 
+    font-weight: 600; 
+    line-height: 1.4; 
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8); 
+}
