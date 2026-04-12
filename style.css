@@ -3,7 +3,7 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-    background-color: #222;
+    background-color: #f0f0f0;
     display: flex;
     justify-content: center;
     font-family: 'Inter', sans-serif;
@@ -11,17 +11,18 @@ body {
 
 .app-container {
     width: 450px;
-    background-color: #f7f8fa;
+    background-color: #f7f8fa; /* Светлый фон всей страницы */
     position: relative;
     overflow: hidden;
+    min-height: 100vh;
 }
 
-/* --- Шапка --- */
+/* --- Header --- */
 .header {
     padding: 25px;
     position: absolute;
     top: 0;
-    z-index: 10;
+    z-index: 50;
 }
 
 .header h1 {
@@ -41,7 +42,7 @@ body {
     background-size: contain;
 }
 
-/* --- Центральный кот --- */
+/* --- Hero (Центральный кот) --- */
 .hero {
     height: 560px;
     background: url('image_5758a6.jpg') no-repeat center top;
@@ -49,6 +50,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* Убираем любые перекрывающие тени, если они были */
 }
 
 .hero-logo {
@@ -61,14 +63,19 @@ body {
 .neko { font-size: 115px; display: block; line-height: 0.6; }
 .market { font-size: 95px; display: block; line-height: 0.6; margin-left: 40px; }
 
-/* --- Секция сотрудников и стрелок --- */
-.employees { margin-top: -110px; position: relative; }
+/* --- Секция сотрудников --- */
+.employees { 
+    margin-top: -110px; 
+    position: relative; 
+    background: transparent; /* Убираем фон, перекрывающий кота */
+}
 
 .employees h2 {
     text-align: center;
     color: white;
     font-size: 16px;
     margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
 .cats-bar-wrapper {
@@ -95,26 +102,33 @@ body {
     z-index: 5;
 }
 
-.labels-container { height: 250px; position: relative; }
+/* --- Подписи (Без фона) --- */
+.labels-container { 
+    height: 250px; 
+    position: relative; 
+}
 
-/* Прозрачный фон для имен как на макете */
 .label {
     position: absolute;
     font-size: 13px;
     font-weight: 600;
-    background: none; /* Убран белый фон */
+    color: #333;
     padding: 2px 0;
     white-space: nowrap;
+    /* Убрано свойство background */
 }
 
-.label-pietro { left: 18%; bottom: 5px; }
-.label-vladimir { left: 50%; bottom: 25px; transform: translateX(-50%); }
-.label-arseniy { right: 15%; bottom: 55px; }
+.label-pietro { left: 5%; bottom: 10px; }
+.label-vladimir { left: 50%; bottom: 35px; transform: translateX(-50%); }
+.label-arseniy { right: 5%; bottom: 65px; }
 
-.typo { border-bottom: 1px dotted red; }
-
-/* --- Нижняя часть --- */
-.info-section { padding: 30px 25px; }
+/* --- Инфо-секция --- */
+.info-section { 
+    padding: 30px 25px; 
+    background: #f7f8fa; 
+    position: relative;
+    z-index: 10;
+}
 
 .info-block { display: flex; justify-content: space-between; margin-bottom: 30px; }
 
@@ -128,8 +142,10 @@ body {
 .bottom-contact { display: flex; align-items: center; gap: 20px; }
 
 .cat-two-thumbs {
-    width: 160px;
+    width: 150px;
     height: 110px;
     background: url('image_57aa25.jpg') no-repeat center;
     background-size: contain;
 }
+
+.contact-text { font-weight: 600; line-height: 1.4; }
