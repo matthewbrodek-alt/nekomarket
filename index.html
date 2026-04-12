@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>NEKOMARKET — Boutique Feline Experience</title>
+    <title>NEKOMARKET</title>
     
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
@@ -13,22 +13,28 @@
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<body class="bg-background text-on-surface font-body">
 
     <nav class="fixed top-0 w-full z-50 bg-[#f9f9f9]/80 backdrop-blur-md">
         <div class="flex justify-between items-start px-12 py-6 max-w-[1440px] mx-auto">
             <div class="flex flex-col gap-1">
                 <span class="text-2xl font-montserrat font-bold uppercase logo-underline text-primary">NEKOMARKET</span>
-                <span class="text-[10px] uppercase tracking-widest text-secondary font-medium">Ваш помощник в аренде пушистого друга</span>
+                <span class="text-[10px] uppercase tracking-widest text-secondary font-medium" data-i18n="nav-subtitle">Ваш помощник в аренде пушистого друга</span>
             </div>
-            <div class="hidden lg:flex gap-10 items-center pt-2">
-                <a class="text-primary font-bold border-b-2 border-primary" href="#">Boutique</a>
-                <a class="text-secondary hover:text-primary transition-colors" href="#">Our Felines</a>
-                <a class="text-secondary hover:text-primary transition-colors" href="#">About Us</a>
-                <span class="material-symbols-outlined text-primary ml-4">pets</span>
+            
+            <div class="hidden lg:flex gap-8 items-center pt-2">
+                <a class="text-primary font-bold border-b-2 border-primary" href="#" data-i18n="nav-boutique">Boutique</a>
+                <a class="text-secondary hover:text-primary transition-colors" href="#" data-i18n="nav-felines">Our Felines</a>
+                <a class="text-secondary hover:text-primary transition-colors" href="#" data-i18n="nav-about">About Us</a>
+                
+                <div class="flex gap-2 ml-4 bg-surface-container p-1 rounded-full text-[10px] font-bold">
+                    <button onclick="changeLanguage('ru')" id="btn-ru" class="px-2 py-1 rounded-full transition-all bg-primary text-white">RU</button>
+                    <button onclick="changeLanguage('en')" id="btn-en" class="px-2 py-1 rounded-full transition-all text-secondary">EN</button>
+                </div>
             </div>
+
             <div class="flex items-start gap-6">
-                <button class="bg-primary text-white px-8 py-3 rounded-lg font-bold shadow-md hover:opacity-90">Rent a Cat</button>
+                <button class="bg-primary text-white px-8 py-3 rounded-lg font-bold shadow-md hover:opacity-90 transition-all" data-i18n="btn-rent">Rent a Cat</button>
                 <div class="w-20 -mt-6">
                     <img alt="Peeking cat" class="w-full" src="image_57aa2b.png">
                 </div>
@@ -44,26 +50,31 @@
             <h1 class="text-[14rem] font-black font-montserrat text-white leading-[0.8] opacity-90 mix-blend-overlay">NEKO</h1>
             <h1 class="text-[10rem] font-black font-montserrat text-white leading-[0.8] opacity-80">market</h1>
         </div>
+        <div class="absolute bottom-12 left-12 z-20 max-w-sm">
+            <p class="text-white font-headline text-lg italic border-l-2 border-primary-container pl-4 drop-shadow-md" data-i18n="hero-quote">
+                "Finding the perfect companion for your afternoon soul-soothing."
+            </p>
+        </div>
     </header>
 
-    <section class="py-24 px-12 bg-surface-container-low">
+    <section class="py-24 px-12 bg-[#f3f3f3]">
         <div class="max-w-[1440px] mx-auto text-center">
-            <h2 class="text-5xl font-black font-headline mb-16">Why Choose NEKOmarket?</h2>
+            <h2 class="text-5xl font-black font-headline mb-16" data-i18n="why-title">Why Choose NEKOmarket?</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-10 rounded-3xl shadow-sm border border-outline-variant/30 flex flex-col items-center">
+                <div class="lang-card">
                     <span class="material-symbols-outlined text-primary text-5xl mb-6">verified_user</span>
-                    <h3 class="text-xl font-bold mb-4">Quality Assurance</h3>
-                    <p class="text-secondary leading-relaxed text-sm text-center">Every feline in our collection undergoes rigorous health checks and temperament assessments to ensure they're the perfect companion.</p>
+                    <h3 class="text-xl font-bold mb-4" data-i18n="why-1-t">Quality Assurance</h3>
+                    <p class="text-secondary text-sm leading-relaxed" data-i18n="why-1-d">Every feline undergoes rigorous health checks and temperament assessments.</p>
                 </div>
-                <div class="bg-white p-10 rounded-3xl shadow-sm border border-outline-variant/30 flex flex-col items-center">
+                <div class="lang-card">
                     <span class="material-symbols-outlined text-primary text-5xl mb-6">location_on</span>
-                    <h3 class="text-xl font-bold mb-4">Phuket Experience</h3>
-                    <p class="text-secondary leading-relaxed text-sm text-center">Located in the heart of Phuket, our boutique offers a serene environment where you can meet and bond with our cats before renting.</p>
+                    <h3 class="text-xl font-bold mb-4" data-i18n="why-2-t">Phuket Experience</h3>
+                    <p class="text-secondary text-sm leading-relaxed" data-i18n="why-2-d">Located in the heart of Phuket, our boutique offers a serene environment.</p>
                 </div>
-                <div class="bg-white p-10 rounded-3xl shadow-sm border border-outline-variant/30 flex flex-col items-center">
+                <div class="lang-card">
                     <span class="material-symbols-outlined text-primary text-5xl mb-6">calendar_month</span>
-                    <h3 class="text-xl font-bold mb-4">Flexible Booking</h3>
-                    <p class="text-secondary leading-relaxed text-sm text-center">Whether you need a companion for a few hours or a whole week, our flexible booking system caters to your schedule.</p>
+                    <h3 class="text-xl font-bold mb-4" data-i18n="why-3-t">Flexible Booking</h3>
+                    <p class="text-secondary text-sm leading-relaxed" data-i18n="why-3-d">Whether for a few hours or a week, we cater to your schedule.</p>
                 </div>
             </div>
         </div>
@@ -71,33 +82,36 @@
 
     <section class="py-24 px-12 bg-white">
         <div class="max-w-[1440px] mx-auto text-center">
-            <h2 class="text-5xl font-black font-headline mb-16">Наши сотрудники</h2>
-            <div class="relative max-w-5xl mx-auto">
-                <div class="bg-white p-4 shadow-2xl rounded-xl border border-gray-100 overflow-hidden">
-                    <img alt="Our feline employees" class="w-full h-auto" src="image_57aa69.png">
+            <h2 class="text-5xl font-black font-headline mb-20" data-i18n="team-title">Наши сотрудники</h2>
+            <div class="relative max-w-4xl mx-auto">
+                <img src="image_57aa69.png" class="w-full shadow-2xl rounded-2xl border border-gray-100">
+                
+                <div class="absolute -left-10 -bottom-8 flex flex-col items-center">
+                    <div class="cat-label">
+                        <span data-i18n="name-1">Пьетро санчез младший</span> 
+                        <span class="age" data-i18n="age-1">1 месяц</span>
+                    </div>
+                    <div class="arrow-line line-left"></div>
                 </div>
-                <div class="absolute left-0 -bottom-5 bg-white/90 backdrop-blur px-6 py-3 rounded-full shadow-lg border border-primary/10">
-                    <p class="font-bold text-sm">Пьетро санчез младший <span class="text-primary ml-2">1 месяц</span></p>
+
+                <div class="absolute left-1/2 -translate-x-1/2 -bottom-16 flex flex-col items-center">
+                    <div class="cat-label">
+                        <span data-i18n="name-2">Луна</span> 
+                        <span class="age" data-i18n="age-2">2 месяца</span>
+                    </div>
+                    <div class="arrow-line line-center"></div>
                 </div>
-                <div class="absolute right-0 -bottom-5 bg-white/90 backdrop-blur px-6 py-3 rounded-full shadow-lg border border-primary/10">
-                    <p class="font-bold text-sm">Арсений <span class="text-primary ml-2">3 месяца</span></p>
+
+                <div class="absolute -right-10 -bottom-8 flex flex-col items-center">
+                    <div class="cat-label">
+                        <span data-i18n="name-3">Арсений</span> 
+                        <span class="age" data-i18n="age-3">3 месяца</span>
+                    </div>
+                    <div class="arrow-line line-right"></div>
                 </div>
             </div>
         </div>
     </section>
-
-    <footer class="w-full py-20 px-12 bg-surface-container border-t border-outline-variant/30 text-center md:text-left">
-        <div class="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-            <div>
-                <div class="font-montserrat font-bold text-secondary text-2xl">NEKOmarket</div>
-                <p class="text-sm text-secondary">© 2024 NEKOmarket Boutique. Curated in Phuket.</p>
-            </div>
-            <div class="flex gap-8">
-                <a class="text-sm text-secondary hover:text-primary" href="#">Privacy</a>
-                <a class="text-sm text-primary underline font-bold" href="#">Contact</a>
-            </div>
-        </div>
-    </footer>
 
     <script src="script.js"></script>
 </body>
