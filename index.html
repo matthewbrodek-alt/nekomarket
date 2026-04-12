@@ -1,61 +1,62 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nekomarket - Clean Layout</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>NEKOMARKET — Аренда котиков</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&family=Inter:wght@400;500;600&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="bg-gray-100 flex justify-center">
 
 <div class="app-container">
-    <header class="header">
-        <div class="header-left">
-            <h1>NEKOMARKET</h1>
-            <p>Ваш помощник в аренде<br>пушистого друга</p>
+    <header class="header-main">
+        <div class="brand-info">
+            <h1 class="brand-name">NEKOMARKET</h1>
+            <p class="brand-sub">Ваш помощник в аренде<br>пушистого друга</p>
         </div>
-        <div class="top-right-cat"></div>
+        <div class="header-cat-icon"></div>
     </header>
 
-    <div class="hero">
-        <div class="hero-logo-wrapper">
+    <section class="hero-section">
+        <div class="logo-wrapper">
             <div class="logo-neko">NEKO</div>
             <div class="logo-market">market</div>
         </div>
-    </div>
+    </section>
 
-    <div class="employees">
-        <h2>Наши сотрудники</h2>
-        <div class="cats-bar-big">
-            <div class="cats-frame">
-                <img src="image_57aa69.png" alt="Сотрудники">
+    <section class="staff-section">
+        <h2 class="section-title">Наши сотрудники</h2>
+        <div class="staff-frame-container">
+            <div class="staff-frame">
+                <img src="image_57aa69.png" alt="Наши коты">
             </div>
         </div>
         
-        <div class="labels-container">
-            <div class="label-box label-pietro">Пьетро Санчез младший 1 месяц</div>
-            <div class="label-box label-vladimir">Владимир 4 месяца</div>
-            <div class="label-box label-arseniy">Арсений 3месяца</div>
+        <div class="labels-layer">
+            <div class="tag tag-pietro">Пьетро Санчез младший 1 месяц</div>
+            <div class="tag tag-vladimir">Владимир 4 месяца</div>
+            <div class="tag tag-arseniy">Арсений 3месяца</div>
         </div>
-    </div>
+    </section>
 
-    <div class="info-section">
-        <div class="info-block">
-            <div class="info-text">
-                <p>С нами стали счастливыми более<br>10 000 клиентов .</p>
-                <p>Мы даем гарантию на продукты</p>
+    <section class="footer-info">
+        <div class="testimonial">
+            <div class="text-content">
+                <p>С нами стали счастливыми более<br>10 000 клиентов.</p>
+                <p class="guarantee">Мы даем гарантию на продукты</p>
             </div>
-            <div class="cat-thumb"></div>
+            <div class="cat-ok-img"></div>
         </div>
 
-        <div class="footer-contact">
-            <div class="cat-double-thumb"></div>
-            <div class="contact-note">
-                Звоните и пишите нам<br>мы находимся на Пхукете
-            </div>
+        <div class="contacts">
+            <div class="cat-double-ok"></div>
+            <p>Звоните и пишите нам<br>мы находимся на Пхукете</p>
         </div>
-    </div>
+    </section>
 </div>
 
+<script src="script.js"></script>
 </body>
 </html>
