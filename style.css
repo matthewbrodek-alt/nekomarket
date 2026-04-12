@@ -1,37 +1,17 @@
+html { scroll-behavior: smooth; }
 .logo-underline { text-decoration: underline; text-underline-offset: 8px; text-decoration-thickness: 2px; }
 .backdrop-blur-md { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
 .mix-blend-overlay { mix-blend-mode: overlay; }
 
-/* SVG Линии */
-.arrow-path {
-    fill: none;
-    stroke: #94464f;
-    stroke-width: 2.5;
-    stroke-linecap: round;
-    opacity: 0.35;
-    stroke-dasharray: 6 4;
-}
+.arrow-path { fill: none; stroke: #94464f; stroke-width: 2.5; stroke-linecap: round; opacity: 0.35; stroke-dasharray: 6 4; }
+.arrow-dot { fill: #94464f; opacity: 0.8; }
 
-.arrow-dot {
-    fill: #94464f;
-    opacity: 0.8;
-}
+.cat-label { background: white; padding: 8px 16px; border-radius: 999px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border: 1px solid rgba(148, 70, 79, 0.05); font-weight: 700; white-space: nowrap; }
+.cat-label .age { color: #94464f; margin-left: 6px; font-weight: 400; font-size: 0.8em; }
 
-/* Плашки */
-.cat-label {
-    background: white;
-    padding: 12px 24px;
-    border-radius: 999px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    border: 1px solid rgba(148, 70, 79, 0.05);
-    font-weight: 700;
-    font-size: 0.85rem;
-    white-space: nowrap;
-}
+.cat-card-review { background: white; padding: 2rem; border-radius: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.02); border: 1px solid #f0f0f0; }
 
-.cat-label .age {
-    color: #94464f;
-    margin-left: 8px;
-    font-weight: 400;
-    font-size: 0.75rem;
+@media (max-width: 768px) {
+    .arrow-path, .arrow-dot { display: none; }
+    .cat-label { position: relative !important; left: auto !important; right: auto !important; bottom: auto !important; transform: none !important; margin: 10px auto; display: inline-block; }
 }
