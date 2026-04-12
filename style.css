@@ -13,21 +13,16 @@
     -webkit-backdrop-filter: blur(12px);
 }
 
-.hero-title {
-    letter-spacing: -0.05em;
-    line-height: 0.85;
-}
-
 .mix-blend-overlay {
     mix-blend-mode: overlay;
 }
 
-/* Удаление трансформации текста, если она была */
-.logo-market {
-    transform: none !important;
+/* Плавный ховер для карточек преимуществ */
+.bg-white.p-10 {
+    transition: transform 0.3s ease, shadow 0.3s ease;
 }
 
-/* Плавность кнопок */
-button {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+.bg-white.p-10:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px -10px rgba(0,0,0,0.1);
 }
