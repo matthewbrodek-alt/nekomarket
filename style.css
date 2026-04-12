@@ -1,21 +1,37 @@
-.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
 .logo-underline { text-decoration: underline; text-underline-offset: 8px; text-decoration-thickness: 2px; }
 .backdrop-blur-md { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+.mix-blend-overlay { mix-blend-mode: overlay; }
 
 /* SVG Линии */
-.arrow-path { fill: none; stroke: #94464f; stroke-width: 2.5; stroke-linecap: round; opacity: 0.35; stroke-dasharray: 6 4; }
-.arrow-dot { fill: #94464f; opacity: 0.8; }
+.arrow-path {
+    fill: none;
+    stroke: #94464f;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    opacity: 0.35;
+    stroke-dasharray: 6 4;
+}
 
-/* Плашки имен */
+.arrow-dot {
+    fill: #94464f;
+    opacity: 0.8;
+}
+
+/* Плашки */
 .cat-label {
-    background: white; padding: 12px 24px; border-radius: 999px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1); border: 1px solid rgba(148, 70, 79, 0.1);
-    font-weight: 700; font-size: 0.9rem; white-space: nowrap;
+    background: white;
+    padding: 12px 24px;
+    border-radius: 999px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border: 1px solid rgba(148, 70, 79, 0.05);
+    font-weight: 700;
+    font-size: 0.85rem;
+    white-space: nowrap;
 }
 
-/* Карточки из нижней секции */
-.cat-card {
-    background: white; padding: 1rem; border-radius: 1.5rem;
-    border: 1px solid #eee; transition: all 0.3s ease;
+.cat-label .age {
+    color: #94464f;
+    margin-left: 8px;
+    font-weight: 400;
+    font-size: 0.75rem;
 }
-.cat-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.05); }
