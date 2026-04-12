@@ -1,53 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;600&display=swap');
-
-* { box-sizing: border-box; margin: 0; padding: 0; }
-
-body {
-    background-color: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    font-family: 'Inter', sans-serif;
-}
-
 .app-container {
     width: 450px;
-    background-color: #fff;
+    background: #ffffff;
+    min-height: 100vh;
     position: relative;
-    overflow: hidden;
+    box-shadow: 0 0 50px rgba(0,0,0,0.1);
 }
 
-/* --- Исправленная Шапка --- */
-.header {
+/* Шапка: разносим по углам */
+.header-main {
     display: flex;
-    justify-content: space-between; /* Текст и кот по разным углам */
-    align-items: flex-start;
-    padding: 30px 20px;
+    justify-content: space-between;
+    padding: 25px;
     position: absolute;
     width: 100%;
-    z-index: 10;
+    z-index: 20;
 }
 
-.header-left h1 {
+.brand-name {
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
+    font-weight: 900;
     text-decoration: underline;
+    text-underline-offset: 4px;
 }
 
-.header-left p {
+.brand-sub {
+    font-family: 'Inter', sans-serif;
     font-size: 13px;
-    margin-top: 5px;
     line-height: 1.2;
+    margin-top: 5px;
 }
 
-.top-right-cat {
+.header-cat-icon {
     width: 80px;
     height: 60px;
     background: url('image_57aa2b.png') no-repeat center;
     background-size: contain;
 }
 
-/* --- Hero & Логотип --- */
-.hero {
+/* Hero и отзеркаленный текст */
+.hero-section {
     height: 550px;
     background: url('image_5758a6.jpg') no-repeat center top;
     background-size: cover;
@@ -56,95 +48,62 @@ body {
     align-items: center;
 }
 
-.hero-logo-wrapper {
-    text-align: center;
-    margin-top: -50px;
-}
-
 .logo-neko {
-    font-size: 110px;
-    font-weight: 900;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 100px;
     color: white;
     line-height: 0.8;
 }
 
 .logo-market {
-    font-size: 90px;
-    font-family: 'Brush Script MT', cursive;
+    font-family: 'Brush Script MT', cursive; /* Используй рукописный шрифт */
+    font-size: 80px;
     color: white;
-    /* Написание задом наперед (отзеркаливание) */
-    transform: scaleX(-1); 
-    display: inline-block;
-    margin-top: 5px;
-}
-
-/* --- Увеличенный Блок Сотрудников --- */
-.employees {
-    padding: 20px 0;
-    background: #fff;
-    margin-top: -60px;
-    position: relative;
-}
-
-.employees h2 {
+    transform: scaleX(-1); /* Пишем задом наперед */
+    display: block;
     text-align: center;
-    font-size: 16px;
-    margin-bottom: 15px;
 }
 
-.cats-bar-big {
-    width: 92%; /* Сделали шире */
+/* Увеличенный блок сотрудников */
+.staff-frame-container {
+    width: 90%;
     margin: 0 auto;
+    padding: 10px;
 }
 
-.cats-frame {
-    height: 120px; /* Увеличили высоту в красном прямоугольнике */
-    border: 8px solid #fff;
+.staff-frame {
+    height: 110px; /* Увеличенная высота */
+    border: 6px solid #fff;
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     overflow: hidden;
     background: #000;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
-.cats-frame img {
+.staff-frame img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
 
-/* --- Подписи --- */
-.labels-container { height: 180px; position: relative; }
-
-.label-box {
+/* Стили для плашек сотрудников */
+.labels-layer { height: 200px; position: relative; }
+.tag {
     position: absolute;
-    background: #fff;
-    padding: 8px 12px;
+    background: white;
+    padding: 5px 12px;
     font-size: 11px;
     font-weight: 600;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+    border-radius: 4px;
 }
 
-.label-arseniy { right: 5%; top: 20px; }
-.label-vladimir { left: 40%; top: 70px; }
-.label-pietro { left: 5%; top: 120px; }
+.tag-arseniy { right: 10%; top: 20px; }
+.tag-vladimir { left: 40%; top: 80px; }
+.tag-pietro { left: 10%; top: 140px; }
 
-/* --- Нижняя часть --- */
-.info-section { padding: 25px; }
-
-.info-block { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
-
-.cat-thumb {
-    width: 100px;
-    height: 100px;
-    background: url('image_5758ab.png') no-repeat center;
-    background-size: contain;
-}
-
-.footer-contact { display: flex; align-items: center; gap: 15px; }
-
-.cat-double-thumb {
-    width: 120px;
-    height: 80px;
-    background: url('image_57aa25.jpg') no-repeat center;
-    background-size: contain;
-}
+/* Нижние блоки */
+.footer-info { padding: 20px; }
+.testimonial { display: flex; justify-content: space-between; align-items: center; }
+.cat-ok-img { width: 120px; height: 120px; background: url('image_5758ab.png') contain no-repeat; }
+.contacts { display: flex; align-items: center; gap: 15px; margin-top: 20px; }
+.cat-double-ok { width: 150px; height: 100px; background: url('image_57aa25.jpg') contain no-repeat; }
