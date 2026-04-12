@@ -1,45 +1,21 @@
 .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
 .logo-underline { text-decoration: underline; text-underline-offset: 8px; text-decoration-thickness: 2px; }
 .backdrop-blur-md { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
-.mix-blend-overlay { mix-blend-mode: overlay; }
 
-/* SVG Стрелки */
-.arrow-path {
-    fill: none;
-    stroke: #94464f; /* Цвет Primary */
-    stroke-width: 2.5;
-    stroke-linecap: round;
-    opacity: 0.4;
-    stroke-dasharray: 6 4; /* Стильный пунктир */
-}
-
-.arrow-dot {
-    fill: #94464f;
-    opacity: 0.8;
-}
+/* SVG Линии */
+.arrow-path { fill: none; stroke: #94464f; stroke-width: 2.5; stroke-linecap: round; opacity: 0.35; stroke-dasharray: 6 4; }
+.arrow-dot { fill: #94464f; opacity: 0.8; }
 
 /* Плашки имен */
 .cat-label {
-    background: white;
-    padding: 12px 24px;
-    border-radius: 999px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
-    border: 1px solid rgba(148, 70, 79, 0.1);
-    font-weight: 700;
-    font-size: 0.9rem;
-    white-space: nowrap;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background: white; padding: 12px 24px; border-radius: 999px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1); border: 1px solid rgba(148, 70, 79, 0.1);
+    font-weight: 700; font-size: 0.9rem; white-space: nowrap;
 }
 
-.cat-label:hover {
-    transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 20px 40px rgba(148, 70, 79, 0.15);
+/* Карточки из нижней секции */
+.cat-card {
+    background: white; padding: 1rem; border-radius: 1.5rem;
+    border: 1px solid #eee; transition: all 0.3s ease;
 }
-
-.cat-label .age {
-    color: #94464f;
-    margin-left: 8px;
-    font-weight: 400;
-    font-size: 0.8rem;
-    opacity: 0.7;
-}
+.cat-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.05); }
