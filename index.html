@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nekomarket - Perfect Copy</title>
+    <title>Nekomarket - Identical Design</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -26,17 +26,22 @@
         <h2>Наши сотрудники</h2>
         <div class="cats-bar-wrapper">
             <div class="cats-bar"></div>
-            <svg class="lines-svg" viewBox="0 0 400 200">
-                <path d="M300,40 L340,100" stroke="white" stroke-width="8" fill="none" />
-                <path d="M200,40 L230,140" stroke="white" stroke-width="8" fill="none" />
-                <path d="M100,40 L120,180" stroke="white" stroke-width="8" fill="none" />
+            <svg class="arrows-svg" viewBox="0 0 400 250">
+                <defs>
+                    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+                        <polygon points="0 0, 10 3.5, 0 7" fill="red" />
+                    </marker>
+                </defs>
+                <line x1="100" y1="230" x2="115" y2="105" stroke="red" stroke-width="3" marker-end="url(#arrowhead)" />
+                <line x1="200" y1="210" x2="200" y2="105" stroke="red" stroke-width="3" marker-end="url(#arrowhead)" />
+                <line x1="280" y1="180" x2="260" y2="105" stroke="red" stroke-width="3" marker-end="url(#arrowhead)" />
             </svg>
         </div>
         
         <div class="labels-container">
-            <div class="brush-label label-arseniy">Арсений 3 месяца</div>
-            <div class="brush-label label-vladimir">Владимир 4 месяца</div>
-            <div class="brush-label label-pietro">Пьетро Санчез младший 1 месяц</div>
+            <div class="label label-pietro">Пьетро Санчез младший 1 месяц</div>
+            <div class="label label-vladimir">Владимир 4 месяца</div>
+            <div class="label label-arseniy">Арсений 3 месяца</div>
         </div>
     </div>
 
