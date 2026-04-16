@@ -329,7 +329,7 @@ const PAGE_CONTENT = {
   'faction-banner-lords': {
     title_ru: 'Знаменосцы (Banner Lords)',
     title_en: 'Banner Lords',
-    iconImg: 'faction/icon1.jpg',
+    iconImg: 'faction/icon1.png',
     content_ru: `
       <div class="pg-meta-row">
         ${infoCard('fa-users','Тип','Светлая / Нейтральная')}
@@ -397,7 +397,7 @@ const PAGE_CONTENT = {
   'faction-high-elves': {
     title_ru: 'Высшие Эльфы (High Elves)',
     title_en: 'High Elves',
-    iconImg: 'faction/icon2.jpg',
+    iconImg: 'faction/icon2.png',
     content_ru: `
       <div class="pg-meta-row">
         ${infoCard('fa-users','Тип','Светлая')}
@@ -459,7 +459,7 @@ const PAGE_CONTENT = {
   'faction-sacred-order': {
     title_ru: 'Священный Орден (Sacred Order)',
     title_en: 'Sacred Order',
-    iconImg: 'faction/icon3.jpg',
+    iconImg: 'faction/icon3.png',
     content_ru: `
       <div class="pg-meta-row">
         ${infoCard('fa-users','Тип','Светлая')}
@@ -509,7 +509,7 @@ const PAGE_CONTENT = {
   'faction-barbarians': {
     title_ru: 'Варвары (Barbarians)',
     title_en: 'Barbarians',
-    iconImg: 'faction/icon4.jpg',
+    iconImg: 'faction/icon4.png',
     content_ru: `
       <div class="pg-meta-row">
         ${infoCard('fa-users','Тип','Нейтральная')}
@@ -559,7 +559,7 @@ const PAGE_CONTENT = {
   'faction-ogryn-tribes': {
     title_ru: 'Племена Огрынов (Ogryn Tribes)',
     title_en: 'Ogryn Tribes',
-    iconImg: 'faction/icon5.jpg',
+    iconImg: 'faction/icon5.png',
     content_ru: `
       <div class="pg-meta-row">
         ${infoCard('fa-users','Тип','Тёмная / Нейтральная')}
@@ -598,7 +598,7 @@ const PAGE_CONTENT = {
   'faction-lizardmen': {
     title_ru: 'Ящеролюди (Lizardmen)',
     title_en: 'Lizardmen',
-    iconImg: 'faction/icon6.jpg',
+    iconImg: 'faction/icon6.png',
     content_ru: `
       <div class="pg-meta-row">
         ${infoCard('fa-users','Тип','Тёмная / Нейтральная')}
@@ -642,7 +642,7 @@ const PAGE_CONTENT = {
   'faction-skinwalkers': {
     title_ru: 'Скинволкеры (Skinwalkers)',
     title_en: 'Skinwalkers',
-    iconImg: 'faction/icon7.jpg',
+    iconImg: 'faction/icon7.png',
     content_ru: `
       <div class="pg-meta-row">
         ${infoCard('fa-users','Тип','Тёмная')}
@@ -681,7 +681,7 @@ const PAGE_CONTENT = {
   'faction-orcs': {
     title_ru: 'Орки (Orcs)',
     title_en: 'Orcs',
-    iconImg: 'faction/icon8.jpg',
+    iconImg: 'faction/icon8.png',
     content_ru: `
       <div class="pg-meta-row">
         ${infoCard('fa-users','Тип','Тёмная')}
@@ -723,7 +723,7 @@ const PAGE_CONTENT = {
   'faction-demonspawn': {
     title_ru: 'Отродья Демонов (Demonspawn)',
     title_en: 'Demonspawn',
-    iconImg: 'faction/icon9.jpg',
+    iconImg: 'faction/icon9.png',
     content_ru: `
       <div class="pg-meta-row">
         ${infoCard('fa-users','Тип','Тёмная')}
@@ -762,7 +762,7 @@ const PAGE_CONTENT = {
   'faction-undead-hordes': {
     title_ru: 'Нежить (Undead Hordes)',
     title_en: 'Undead Hordes',
-    iconImg: 'faction/icon10.jpg',
+    iconImg: 'faction/icon10.png',
     content_ru: `
       <div class="pg-meta-row">
         ${infoCard('fa-users','Тип','Тёмная')}
@@ -805,7 +805,7 @@ const PAGE_CONTENT = {
   'faction-dark-elves': {
     title_ru: 'Тёмные Эльфы (Dark Elves)',
     title_en: 'Dark Elves',
-    iconImg: 'faction/icon11.jpg',
+    iconImg: 'faction/icon11.png',
     content_ru: `
       <div class="pg-meta-row">
         ${infoCard('fa-users','Тип','Тёмная')}
@@ -848,7 +848,7 @@ const PAGE_CONTENT = {
   'faction-knights-revenant': {
     title_ru: 'Рыцари Ревенанты (Knights Revenant)',
     title_en: 'Knights Revenant',
-    iconImg: 'faction/icon12.jpg',
+    iconImg: 'faction/icon12.png',
     content_ru: `
       <div class="pg-meta-row">
         ${infoCard('fa-users','Тип','Тёмная')}
@@ -885,7 +885,7 @@ const PAGE_CONTENT = {
   'faction-dwarves': {
     title_ru: 'Дварфы (Dwarves)',
     title_en: 'Dwarves',
-    iconImg: 'faction/icon13.jpg',
+    iconImg: 'faction/icon13.png',
     content_ru: `
       <div class="pg-meta-row">
         ${infoCard('fa-users','Тип','Светлая')}
@@ -922,7 +922,7 @@ const PAGE_CONTENT = {
   'faction-shadowkin': {
     title_ru: 'Теневой Народ (Shadowkin)',
     title_en: 'Shadowkin',
-    iconImg: 'faction/icon14.jpg',
+    iconImg: 'faction/icon14.png',
     content_ru: `
       <div class="pg-meta-row">
         ${infoCard('fa-users','Тип','Нейтральная')}
@@ -962,7 +962,7 @@ const PAGE_CONTENT = {
   'faction-sylvan-watchers': {
     title_ru: 'Лесные Стражи (Sylvan Watchers)',
     title_en: 'Sylvan Watchers',
-    iconImg: 'faction/icon15.jpg',
+    iconImg: 'faction/icon15.png',
     content_ru: `
       <div class="pg-meta-row">
         ${infoCard('fa-users','Тип','Нейтральная')}
@@ -997,7 +997,7 @@ const PAGE_CONTENT = {
   'faction-argonites': {
     title_ru: 'Аргониты (Argonites) — НОВАЯ',
     title_en: 'Argonites — NEW',
-    iconImg: 'faction/icon16.jpg',
+    iconImg: 'faction/icon16.png',
     content_ru: `
       <div class="pg-meta-row">
         ${infoCard('fa-users','Тип','Нейтральная')}
