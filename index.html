@@ -1,118 +1,368 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>NEKOMARKET — Boutique Feline Experience</title>
-    
-    <link href="https://fonts.googleapis.com" rel="preconnect">
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&family=Inter:wght@400;500;600&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,FILL@0..1&display=swap" rel="stylesheet">
-    
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RaidGuide.pro — Гайды по Raid: Shadow Legends</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- Icons from CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body class="bg-background text-on-surface font-body">
+<body>
 
-    <nav class="fixed top-0 w-full z-50 bg-[#f9f9f9]/90 backdrop-blur-md border-b border-gray-100">
-        <div class="flex flex-col md:flex-row justify-between items-center px-6 md:px-12 py-4 max-w-[1440px] mx-auto gap-4">
-            <div class="flex flex-col gap-1 text-center md:text-left">
-                <span class="text-xl md:text-2xl font-montserrat font-bold uppercase logo-underline text-primary">NEKOMARKET</span>
-                <span class="text-[9px] uppercase tracking-widest text-secondary font-medium" data-i18n="nav-subtitle">Ваш помощник в аренде пушистого друга</span>
-            </div>
-            
-            <div class="flex flex-wrap justify-center gap-4 md:gap-8 text-[10px] md:text-xs font-bold uppercase tracking-widest text-secondary">
-                <a href="#about" class="hover:text-primary transition-colors">О нас</a>
-                <a href="#reviews" class="hover:text-primary transition-colors">Отзывы</a>
-                <a href="#contacts" class="hover:text-primary transition-colors">Контакты</a>
-                <a href="#address" class="hover:text-primary transition-colors">Адрес</a>
-            </div>
+<!-- ═══ ВИДЕО ФОН ═══ -->
+<div class="bg-video-wrap">
+  <video autoplay muted loop playsinline id="bgVideo">
+    <!-- Замените на bg.mp4 в папке с сайтом -->
+    <source src="bg.mp4" type="video/mp4">
+  </video>
+  <div class="bg-overlay"></div>
+</div>
 
-            <div class="flex items-center gap-4">
-                <div class="flex gap-1 bg-gray-200/50 p-1 rounded-full text-[10px] font-bold">
-                    <button onclick="changeLanguage('ru')" id="btn-ru" class="px-2 py-1 rounded-full transition-all bg-primary text-white">RU</button>
-                    <button onclick="changeLanguage('en')" id="btn-en" class="px-2 py-1 rounded-full transition-all text-secondary">EN</button>
-                </div>
-                <button class="bg-primary text-white px-6 py-2 md:px-8 md:py-3 rounded-lg font-bold shadow-md hover:opacity-90 transition-all text-xs md:text-sm" data-i18n="btn-rent">Арендовать</button>
-            </div>
+<!-- ═══ НАВИГАЦИЯ ═══ -->
+<nav class="topnav" id="topnav">
+  <div class="nav-brand">
+    <div class="brand-icon"><i class="fa-solid fa-dragon"></i></div>
+    <span class="brand-name">Raid<span class="brand-accent">Guide</span>.pro</span>
+  </div>
+  <div class="nav-links" id="navLinks">
+    <a href="#new-player" class="nav-link"><i class="fa-solid fa-star"></i> Новичкам</a>
+    <a href="#guides"     class="nav-link"><i class="fa-solid fa-scroll"></i> Гайды</a>
+    <a href="#dungeons"   class="nav-link"><i class="fa-solid fa-dungeon"></i> Подземелья</a>
+    <a href="#factions"   class="nav-link"><i class="fa-solid fa-shield-halved"></i> Фракции</a>
+    <a href="#doom-tower" class="nav-link"><i class="fa-solid fa-tower-observation"></i> Башня Рока</a>
+    <a href="#hydra"      class="nav-link"><i class="fa-solid fa-skull"></i> Гидра</a>
+    <a href="#cursed"     class="nav-link"><i class="fa-solid fa-city"></i> Проклятый город</a>
+    <a href="#tools"      class="nav-link"><i class="fa-solid fa-calculator"></i> Инструменты</a>
+  </div>
+  <button class="burger" id="burger" aria-label="Меню">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<header class="hero" id="home">
+  <div class="hero-content">
+    <div class="hero-badge"><i class="fa-solid fa-fire"></i> Обновлено для 2026</div>
+    <h1 class="hero-title">Мастер&shy;ство в<br><span class="hero-accent">Raid: Shadow Legends</span></h1>
+    <p class="hero-sub">Tier-листы, гайды по подземельям, стратегии для Клан-Босса и Башни Рока. Всё что нужно для прогресса.</p>
+    <div class="hero-btns">
+      <a href="#new-player" class="btn btn-primary"><i class="fa-solid fa-play"></i> Начать игру</a>
+      <a href="#guides"     class="btn btn-outline"><i class="fa-solid fa-list-ul"></i> Tier-лист</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-n">800+</span><span class="stat-l">Чемпионов</span></div>
+      <div class="stat-div"></div>
+      <div class="stat"><span class="stat-n">16</span><span class="stat-l">Фракций</span></div>
+      <div class="stat-div"></div>
+      <div class="stat"><span class="stat-n">100+</span><span class="stat-l">Гайдов</span></div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="orbit-ring ring1"></div>
+    <div class="orbit-ring ring2"></div>
+    <div class="orbit-ring ring3"></div>
+    <div class="hero-gem">
+      <div class="gem-inner">
+        <i class="fa-solid fa-gem"></i>
+      </div>
+      <div class="gem-glow"></div>
+    </div>
+    <!-- Плавающие иконки фракций -->
+    <div class="float-icon fi1"><i class="fa-solid fa-crown"></i></div>
+    <div class="float-icon fi2"><i class="fa-solid fa-khanda"></i></div>
+    <div class="float-icon fi3"><i class="fa-solid fa-skull-crossbones"></i></div>
+    <div class="float-icon fi4"><i class="fa-solid fa-fire-flame-curved"></i></div>
+    <div class="float-icon fi5"><i class="fa-solid fa-leaf"></i></div>
+    <div class="float-icon fi6"><i class="fa-solid fa-bolt"></i></div>
+  </div>
+</header>
+
+<!-- ═══ АНИМИРОВАННЫЕ БАННЕРЫ ═══ -->
+<section class="promo-strip">
+  <div class="promo-track">
+    <div class="promo-item"><i class="fa-solid fa-fire-flame-curved text-gold"></i> Новая фракция: Аргониты</div>
+    <div class="promo-item"><i class="fa-solid fa-star text-gold"></i> Tier-лист обновлён: апрель 2026</div>
+    <div class="promo-item"><i class="fa-solid fa-trophy text-gold"></i> Гайд по Химере — читать →</div>
+    <div class="promo-item"><i class="fa-solid fa-dragon text-gold"></i> Новые Мифические чемпионы</div>
+    <div class="promo-item"><i class="fa-solid fa-bolt text-gold"></i> Обновление системы Благословений</div>
+    <!-- дублируем для бесконечной ленты -->
+    <div class="promo-item"><i class="fa-solid fa-fire-flame-curved text-gold"></i> Новая фракция: Аргониты</div>
+    <div class="promo-item"><i class="fa-solid fa-star text-gold"></i> Tier-лист обновлён: апрель 2026</div>
+    <div class="promo-item"><i class="fa-solid fa-trophy text-gold"></i> Гайд по Химере — читать →</div>
+    <div class="promo-item"><i class="fa-solid fa-dragon text-gold"></i> Новые Мифические чемпионы</div>
+    <div class="promo-item"><i class="fa-solid fa-bolt text-gold"></i> Обновление системы Благословений</div>
+  </div>
+</section>
+
+<!-- ═══ МЕГАМЕНЮ / РАЗДЕЛЫ ═══ -->
+<main class="container">
+
+  <!-- ─── НОВОМУ ИГРОКУ ─── -->
+  <section class="section" id="new-player">
+    <div class="section-header">
+      <div class="section-icon"><i class="fa-solid fa-star"></i></div>
+      <h2>Гайды для новых игроков</h2>
+    </div>
+    <div class="links-grid">
+      <a class="guide-link" href="#"><i class="fa-solid fa-link"></i> Генератор ссылок для новичков</a>
+      <a class="guide-link" href="#"><i class="fa-solid fa-book-open"></i> Начало игры в Raid</a>
+      <a class="guide-link" href="#"><i class="fa-solid fa-yin-yang"></i> Руководство по аффинити</a>
+      <a class="guide-link" href="#"><i class="fa-solid fa-arrow-up-right-dots"></i> Вознесение чемпионов</a>
+      <a class="guide-link" href="#"><i class="fa-solid fa-wand-sparkles"></i> Баффы и дебаффы</a>
+      <a class="guide-link" href="#"><i class="fa-solid fa-medal"></i> Кого прокачать до 60?</a>
+      <a class="guide-link" href="#"><i class="fa-solid fa-calendar-check"></i> Ежедневные чемпионы входа</a>
+      <a class="guide-link" href="#"><i class="fa-solid fa-chess-knight"></i> Миссии Арбитра</a>
+      <a class="guide-link" href="#"><i class="fa-solid fa-r"></i> Миссии Рамантуша</a>
+      <a class="guide-link" href="#"><i class="fa-solid fa-m"></i> Миссии Мариуса</a>
+      <a class="guide-link hot" href="#"><i class="fa-solid fa-tag"></i> Промо-коды <span class="badge-hot">🔥</span></a>
+    </div>
+  </section>
+
+  <!-- ─── ГАЙДЫ И TIER-ЛИСТЫ ─── -->
+  <section class="section" id="guides">
+    <div class="section-header">
+      <div class="section-icon"><i class="fa-solid fa-scroll"></i></div>
+      <h2>Гайды и Tier-листы</h2>
+    </div>
+    <div class="links-grid">
+      <a class="guide-link hot" href="#"><i class="fa-solid fa-trophy"></i> Tier-лист чемпионов <span class="badge-hot">🔥</span></a>
+      <a class="guide-link" href="#"><i class="fa-solid fa-shield-halved"></i> Tier-листы по Войне фракций</a>
+      <a class="guide-link new" href="#"><i class="fa-solid fa-star"></i> Tier-лист благословений <span class="badge-new">NEW</span></a>
+      <a class="guide-link" href="#"><i class="fa-solid fa-users"></i> Конструктор команды благословений</a>
+      <a class="guide-link" href="#"><i class="fa-solid fa-gem"></i> Tier-лист реликвий <span class="badge-hot">🔥</span></a>
+      <a class="guide-link" href="#"><i class="fa-solid fa-shield"></i> Tier-листы артефактов</a>
+      <a class="guide-link" href="#"><i class="fa-solid fa-hourglass-half"></i> Прошлые гарантированные чемпионы</a>
+      <a class="guide-link" href="#"><i class="fa-solid fa-calendar-days"></i> Прошлые Fusion-события</a>
+      <a class="guide-link" href="#"><i class="fa-solid fa-object-group"></i> Подготовка к Fusion</a>
+      <a class="guide-link" href="#"><i class="fa-solid fa-chart-line"></i> Определи свой прогресс</a>
+    </div>
+  </section>
+
+  <!-- ─── ПОДЗЕМЕЛЬЯ И КЛАН-БОСС ─── -->
+  <section class="section" id="dungeons">
+    <div class="section-header">
+      <div class="section-icon"><i class="fa-solid fa-dungeon"></i></div>
+      <h2>Подземелья и Клан-Босс</h2>
+    </div>
+    <div class="links-grid">
+      <a class="guide-link" href="#"><i class="fa-solid fa-skull"></i> Гайд по Клан-Боссу</a>
+      <a class="guide-link" href="#"><i class="fa-solid fa-dragon"></i> Гайд по Боссу Химера</a>
+      <a class="guide-link" href="#"><i class="fa-solid fa-stopwatch"></i> Что такое Speed-tuned команда?</a>
+      <a class="guide-link" href="#"><i class="fa-solid fa-fire"></i> Дракон — гайд</a>
+      <a class="guide-link" href="#"><i class="fa-solid fa-fire-flame-curved"></i> Рыцарь Огня — гайд</a>
+      <a class="guide-link" href="#"><i class="fa-solid fa-spider"></i> Паучница — гайд</a>
+      <a class="guide-link" href="#"><i class="fa-solid fa-snowflake"></i> Ледяной голем — гайд</a>
+      <a class="guide-link" href="#"><i class="fa-solid fa-cow"></i> Минотавр — гайд</a>
+      <a class="guide-link" href="#"><i class="fa-solid fa-bolt"></i> Железные Близнецы — гайд</a>
+      <a class="guide-link" href="#"><i class="fa-solid fa-ghost"></i> Призрачная роща — гайд</a>
+      <a class="guide-link" href="#"><i class="fa-solid fa-sun"></i> Песчаный дьявол — гайд</a>
+      <a class="guide-link" href="#"><i class="fa-solid fa-map"></i> Гайд по Событийным Подземельям</a>
+    </div>
+  </section>
+
+  <!-- ─── ФРАКЦИИ ─── -->
+  <section class="section" id="factions">
+    <div class="section-header">
+      <div class="section-icon"><i class="fa-solid fa-shield-halved"></i></div>
+      <h2>Фракции <span class="badge-new">NEW: Аргониты</span></h2>
+    </div>
+    <div class="factions-wrap">
+      <div class="factions-col">
+        <a class="faction-link" href="#"><img src="https://raid.guide/imgs/factions/banner-lords.png" onerror="this.style.display='none'" alt="">
+          <i class="fa-solid fa-crown"></i> Лорды-Знаменосцы</a>
+        <a class="faction-link" href="#"><i class="fa-solid fa-leaf"></i> Священный Орден</a>
+        <a class="faction-link" href="#"><i class="fa-solid fa-axe-battle"></i> Варвары</a>
+        <a class="faction-link" href="#"><i class="fa-solid fa-person-chalkboard"></i> Племена огринов</a>
+        <a class="faction-link" href="#"><i class="fa-solid fa-scale-unbalanced"></i> Ящеролюди</a>
+        <a class="faction-link" href="#"><i class="fa-solid fa-paw"></i> Зверолюди</a>
+        <a class="faction-link" href="#"><i class="fa-solid fa-fist-raised"></i> Орки</a>
+        <a class="faction-link" href="#"><i class="fa-solid fa-fire-flame-curved"></i> Порождения Тьмы</a>
+      </div>
+      <div class="factions-col">
+        <a class="faction-link" href="#"><i class="fa-solid fa-skull-crossbones"></i> Орды Нежити</a>
+        <a class="faction-link" href="#"><i class="fa-solid fa-moon"></i> Тёмные Эльфы</a>
+        <a class="faction-link" href="#"><i class="fa-solid fa-wand-sparkles"></i> Высшие Эльфы</a>
+        <a class="faction-link" href="#"><i class="fa-solid fa-khanda"></i> Рыцари Ревенант</a>
+        <a class="faction-link" href="#"><i class="fa-solid fa-wind"></i> Тенекин</a>
+        <a class="faction-link" href="#"><i class="fa-solid fa-mountain"></i> Дварфы</a>
+        <a class="faction-link" href="#"><i class="fa-solid fa-tree"></i> Стражи Сильвана</a>
+        <a class="faction-link new" href="#"><i class="fa-solid fa-bolt"></i> Аргониты <span class="badge-new">NEW</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── БАШНЯ РОКА ─── -->
+  <section class="section" id="doom-tower">
+    <div class="section-header">
+      <div class="section-icon"><i class="fa-solid fa-tower-observation"></i></div>
+      <h2>Башня Рока</h2>
+    </div>
+    <div class="links-grid">
+      <a class="guide-link" href="#"><i class="fa-solid fa-tower-observation"></i> Гайд по Башне Рока</a>
+      <a class="guide-link" href="#"><i class="fa-solid fa-rotate"></i> Ротации Башни Рока</a>
+      <a class="guide-link" href="#"><i class="fa-solid fa-door-open"></i> Секретные комнаты Башни</a>
+      <a class="guide-link" href="#"><i class="fa-solid fa-skull"></i> Боссы Башни Рока</a>
+      <a class="guide-link" href="#"><i class="fa-solid fa-gem"></i> Наборы артефактов Башни</a>
+    </div>
+  </section>
+
+  <!-- ─── ГИДРА ─── -->
+  <section class="section" id="hydra">
+    <div class="section-header">
+      <div class="section-icon"><i class="fa-solid fa-skull"></i></div>
+      <h2>Гидра Клан-Босс</h2>
+    </div>
+    <div class="links-grid">
+      <a class="guide-link" href="#"><i class="fa-solid fa-skull"></i> Гайд по Гидре</a>
+      <a class="guide-link" href="#"><i class="fa-solid fa-play-circle"></i> Начало работы с Гидрой</a>
+      <a class="guide-link" href="#"><i class="fa-solid fa-circle-nodes"></i> Головы Гидры</a>
+      <a class="guide-link" href="#"><i class="fa-solid fa-gift"></i> Награды Гидры</a>
+      <a class="guide-link" href="#"><i class="fa-solid fa-star"></i> Лучшие благословения для Гидры</a>
+    </div>
+  </section>
+
+  <!-- ─── ПРОКЛЯТЫЙ ГОРОД ─── -->
+  <section class="section" id="cursed">
+    <div class="section-header">
+      <div class="section-icon"><i class="fa-solid fa-city"></i></div>
+      <h2>Проклятый город</h2>
+    </div>
+    <div class="links-grid">
+      <a class="guide-link" href="#"><i class="fa-solid fa-route"></i> Тур по Синтраносу</a>
+      <a class="guide-link" href="#"><i class="fa-solid fa-list-check"></i> Список ограничений (обычный режим)</a>
+      <a class="guide-link" href="#"><i class="fa-solid fa-triangle-exclamation"></i> Список ограничений (сложный режим)</a>
+      <a class="guide-link" href="#"><i class="fa-solid fa-dragon"></i> Гайд по боссу Амиусу</a>
+    </div>
+  </section>
+
+  <!-- ─── ИНСТРУМЕНТЫ ─── -->
+  <section class="section" id="tools">
+    <div class="section-header">
+      <div class="section-icon"><i class="fa-solid fa-calculator"></i></div>
+      <h2>Инструменты</h2>
+    </div>
+    <div class="links-grid">
+      <a class="guide-link" href="#"><i class="fa-solid fa-toolbox"></i> Инструменты Raid</a>
+      <a class="guide-link hot" href="#"><i class="fa-solid fa-map-location-dot"></i> Инструмент этапов Raid <span class="badge-hot">🔥</span></a>
+      <a class="guide-link" href="#"><i class="fa-solid fa-box-open"></i> Калькулятор акционных предложений</a>
+      <a class="guide-link" href="#"><i class="fa-solid fa-users-between-lines"></i> Калькулятор «Клан против Клана»</a>
+      <a class="guide-link" href="#"><i class="fa-solid fa-shield-virus"></i> Калькулятор EHP</a>
+      <a class="guide-link" href="#"><i class="fa-solid fa-chart-bar"></i> Инструмент эффективности урона</a>
+      <a class="guide-link" href="#"><i class="fa-solid fa-chest"></i> Симулятор сундука Клан-Босса</a>
+    </div>
+  </section>
+
+  <!-- ─── ВИДЕО-ГАЙДЫ ─── -->
+  <section class="section" id="videos">
+    <div class="section-header">
+      <div class="section-icon"><i class="fa-brands fa-youtube"></i></div>
+      <h2>Видео-гайды</h2>
+    </div>
+    <div class="videos-grid">
+      <!-- Реальные видео с YouTube о Raid Shadow Legends -->
+      <div class="video-card">
+        <div class="video-thumb">
+          <iframe src="https://www.youtube.com/embed/Ep6EzZ9QROE"
+            title="Raid Shadow Legends Beginners Guide"
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen loading="lazy"></iframe>
         </div>
-    </nav>
-
-    <header class="relative w-full h-[60vh] md:h-screen overflow-hidden flex items-center justify-center pt-20">
-        <div class="absolute inset-0 z-0">
-            <img class="w-full h-full object-cover" src="image_5758a6.jpg" alt="Hero Cat">
+        <div class="video-info">
+          <span class="video-tag"><i class="fa-solid fa-star"></i> Новичкам</span>
+          <p>Полный гайд для начинающих</p>
         </div>
-        <div class="relative z-10 text-center select-none px-4">
-            <h1 class="text-[5rem] md:text-[18rem] font-black font-montserrat text-white leading-[0.7] opacity-90 mix-blend-overlay">NEKO</h1>
-            <h1 class="text-[4rem] md:text-[12rem] font-black font-montserrat text-white leading-[0.7] opacity-80">market</h1>
+      </div>
+      <div class="video-card">
+        <div class="video-thumb">
+          <iframe src="https://www.youtube.com/embed/0P-o3Kbh1yc"
+            title="Raid Clan Boss Guide"
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen loading="lazy"></iframe>
         </div>
-    </header>
-
-    <section id="about" class="py-20 px-6 md:px-12 bg-white">
-        <div class="max-w-3xl mx-auto text-center">
-            <h2 class="text-3xl md:text-5xl font-black font-headline mb-8">Boutique Feline Experience</h2>
-            <p class="text-secondary leading-relaxed text-sm md:text-base">Мы создали бутик, где каждый кот — личность со своим характером и стилем жизни.</p>
+        <div class="video-info">
+          <span class="video-tag"><i class="fa-solid fa-skull"></i> Клан-Босс</span>
+          <p>Стратегия и лучшие команды</p>
         </div>
-    </section>
-
-    <section class="py-20 px-6 md:px-12 bg-white overflow-hidden">
-        <div class="max-w-[1440px] mx-auto text-center">
-            <h2 class="text-3xl md:text-4xl font-black font-headline mb-16" data-i18n="team-title">Наши сотрудники</h2>
-            <div class="relative max-w-4xl mx-auto">
-                <img src="image_57aa69.png" class="w-full shadow-2xl rounded-2xl relative z-10 border border-gray-100">
-                <svg class="absolute inset-0 w-full h-full pointer-events-none z-20" viewBox="0 0 800 500" preserveAspectRatio="none">
-                    <path d="M 180 460 Q 180 400 200 360" class="arrow-path" />
-                    <circle cx="200" cy="360" r="4" class="arrow-dot" />
-                    <path d="M 400 480 Q 400 410 400 360" class="arrow-path" />
-                    <circle cx="400" cy="360" r="4" class="arrow-dot" />
-                    <path d="M 620 460 Q 620 400 590 355" class="arrow-path" />
-                    <circle cx="590" cy="355" r="4" class="arrow-dot" />
-                </svg>
-                <div class="absolute" style="left: 10%; bottom: -20px; z-index: 30;"><div class="cat-label text-[10px] md:text-sm"><span data-i18n="name-1">Пьетро Санчез младший</span> <span class="age" data-i18n="age-1">1 месяц</span></div></div>
-                <div class="absolute" style="left: 50%; bottom: -50px; transform: translateX(-50%); z-index: 30;"><div class="cat-label text-[10px] md:text-sm"><span data-i18n="name-2">Луна</span> <span class="age" data-i18n="age-2">2 месяца</span></div></div>
-                <div class="absolute" style="right: 10%; bottom: -20px; z-index: 30;"><div class="cat-label text-[10px] md:text-sm"><span data-i18n="name-3">Арсений</span> <span class="age" data-i18n="age-3">3 месяца</span></div></div>
-            </div>
+      </div>
+      <div class="video-card">
+        <div class="video-thumb">
+          <iframe src="https://www.youtube.com/embed/k9T0-yqVF8M"
+            title="Raid Doom Tower Guide"
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen loading="lazy"></iframe>
         </div>
-    </section>
-
-    <section class="py-24 px-6 md:px-12 bg-background">
-        <div class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div class="space-y-8">
-                <div class="flex items-center gap-6 p-6 bg-white rounded-3xl shadow-sm"><img src="image_5758ab.png" class="w-12 h-12"><h3 class="font-bold">Более 10 000 счастливых клиентов</h3></div>
-                <div class="flex items-center gap-6 p-6 bg-white rounded-3xl shadow-sm"><img src="image_57aa25.png" class="w-12 h-12"><h3 class="font-bold">Гарантия на продукты</h3></div>
-            </div>
-            <div class="text-center md:text-right flex flex-col items-center md:items-end">
-                <h2 class="text-2xl md:text-3xl font-black mb-8 leading-tight">Звоните нам на Пхукете</h2>
-                <div class="w-16 opacity-20 rotate-180"><img src="image_57aa2b.png"></div>
-            </div>
+        <div class="video-info">
+          <span class="video-tag"><i class="fa-solid fa-tower-observation"></i> Башня Рока</span>
+          <p>Как пройти Башню Рока</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section id="reviews" class="py-24 px-6 md:px-12 bg-white">
-        <div class="max-w-[1440px] mx-auto text-center"><h2 class="text-4xl font-black mb-16">Отзывы</h2><div class="grid grid-cols-1 md:grid-cols-3 gap-8"><div class="cat-card-review"><p class="italic text-secondary mb-6">"Брала Пьетро на выходные. Он настоящий профессионал."</p><div class="font-bold">Елена В.</div></div><div class="cat-card-review"><p class="italic text-secondary mb-6">"Владимир помог мне закончить сложный проект."</p><div class="font-bold">Марк С.</div></div><div class="cat-card-review"><p class="italic text-secondary mb-6">"Арсений — просто звезда! Рекомендую всем."</p><div class="font-bold">Алиса К.</div></div></div></div>
-    </section>
-
-    <section id="contacts" class="py-24 px-6 md:px-12 bg-background border-t border-gray-100">
-        <div class="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center" id="address">
-            <div class="space-y-8">
-                <h2 class="text-3xl md:text-4xl font-black">Контакты</h2>
-                <div class="space-y-4">
-                    <div class="flex items-center gap-4"><span class="material-symbols-outlined text-primary">call</span><span class="font-bold">+66 98 765 4321</span></div>
-                    <div class="flex items-center gap-4"><span class="material-symbols-outlined text-primary">location_on</span><span class="font-medium">Bang Tao Beach Road, Phuket</span></div>
-                </div>
-            </div>
-            <div class="rounded-[2rem] overflow-hidden h-[300px] md:h-[450px]"><img src="image_663a60_map.png" class="w-full h-full object-cover grayscale opacity-60"></div>
+  <!-- ─── TIER-ЛИСТ ПРЕВЬЮ ─── -->
+  <section class="section tier-preview-section">
+    <div class="section-header">
+      <div class="section-icon"><i class="fa-solid fa-trophy"></i></div>
+      <h2>Tier-лист чемпионов 2026</h2>
+    </div>
+    <p class="section-intro">Лучшие чемпионы по версии сообщества — рейтинг учитывает Клан-Босса, Гидру, Башню Рока, Арену и Подземелья.</p>
+    <div class="tier-rows">
+      <div class="tier-row">
+        <div class="tier-label tier-s">S</div>
+        <div class="tier-champs">
+          <div class="champ-card"><div class="champ-icon bg-void"><i class="fa-solid fa-crown"></i></div><span>Сифи</span></div>
+          <div class="champ-card"><div class="champ-icon bg-magic"><i class="fa-solid fa-wand-sparkles"></i></div><span>Лидия</span></div>
+          <div class="champ-card"><div class="champ-icon bg-force"><i class="fa-solid fa-fire"></i></div><span>Арбитр</span></div>
+          <div class="champ-card"><div class="champ-icon bg-spirit"><i class="fa-solid fa-ghost"></i></div><span>Герцогиня Лилиту</span></div>
+          <div class="champ-card"><div class="champ-icon bg-void"><i class="fa-solid fa-bolt"></i></div><span>Валькирия</span></div>
         </div>
-    </section>
-
-    <footer class="py-12 px-6 bg-white border-t text-center md:text-left">
-        <div class="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-            <div class="font-bold text-xl text-primary">NEKOmarket</div>
-            <div class="flex gap-8 text-[11px] font-black uppercase tracking-widest text-secondary"><a href="#">Terms</a><a href="#">Privacy</a><a href="#" class="text-primary underline">Contact Us</a></div>
+      </div>
+      <div class="tier-row">
+        <div class="tier-label tier-a">A</div>
+        <div class="tier-champs">
+          <div class="champ-card"><div class="champ-icon bg-force"><i class="fa-solid fa-shield"></i></div><span>Урсала</span></div>
+          <div class="champ-card"><div class="champ-icon bg-magic"><i class="fa-solid fa-skull"></i></div><span>Ма'Шаллед</span></div>
+          <div class="champ-card"><div class="champ-icon bg-spirit"><i class="fa-solid fa-star"></i></div><span>Уорлорд</span></div>
+          <div class="champ-card"><div class="champ-icon bg-void"><i class="fa-solid fa-moon"></i></div><span>Митрала</span></div>
+          <div class="champ-card"><div class="champ-icon bg-force"><i class="fa-solid fa-fist-raised"></i></div><span>Гнут</span></div>
         </div>
-    </footer>
+      </div>
+      <div class="tier-row">
+        <div class="tier-label tier-b">B</div>
+        <div class="tier-champs">
+          <div class="champ-card"><div class="champ-icon bg-spirit"><i class="fa-solid fa-leaf"></i></div><span>Скил</span></div>
+          <div class="champ-card"><div class="champ-icon bg-magic"><i class="fa-solid fa-paw"></i></div><span>Торагу</span></div>
+          <div class="champ-card"><div class="champ-icon bg-void"><i class="fa-solid fa-sun"></i></div><span>Паллас</span></div>
+          <div class="champ-card"><div class="champ-icon bg-force"><i class="fa-solid fa-wind"></i></div><span>Деметра</span></div>
+          <div class="champ-card"><div class="champ-icon bg-magic"><i class="fa-solid fa-dragon"></i></div><span>Каель</span></div>
+        </div>
+      </div>
+    </div>
+    <a href="#guides" class="btn btn-primary btn-center"><i class="fa-solid fa-list-ul"></i> Полный Tier-лист</a>
+  </section>
 
-    <script src="script.js"></script>
+</main>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="brand-icon small"><i class="fa-solid fa-dragon"></i></div>
+      <span class="brand-name">Raid<span class="brand-accent">Guide</span>.pro</span>
+    </div>
+    <p class="footer-note">Неофициальный фанатский ресурс. Raid: Shadow Legends принадлежит Plarium Games. Все материалы носят информационный характер.</p>
+    <div class="footer-links">
+      <a href="#new-player">Новичкам</a>
+      <a href="#guides">Tier-лист</a>
+      <a href="#dungeons">Подземелья</a>
+      <a href="#tools">Инструменты</a>
+    </div>
+    <p class="footer-copy">© 2026 RaidGuide.pro — Все права защищены</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
