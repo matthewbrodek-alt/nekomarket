@@ -65,11 +65,6 @@
       </span>
       <span class="lang-label" id="langLabel">RU</span>
     </button>
-    <!-- Переключатель темы -->
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-      <span class="theme-icon-dark"><i class="fa-solid fa-moon"></i></span>
-      <span class="theme-icon-light"><i class="fa-solid fa-sun"></i></span>
-    </button>
     <!-- Бургер -->
     <button class="burger" id="burger" aria-label="Меню">
       <span></span><span></span><span></span>
@@ -151,6 +146,20 @@
   </div>
 </section>
 
+<!-- ═══ ОВЕРЛЕЙ СТРАНИЦ ═══ -->
+<div class="page-overlay" id="pageOverlay">
+  <div class="page-overlay-inner">
+    <button class="page-overlay-close" id="pageOverlayClose" aria-label="Закрыть"><i class="fa-solid fa-xmark"></i></button>
+    <div class="page-overlay-header">
+      <div class="page-overlay-icon" id="pageOverlayIcon"></div>
+      <h2 class="page-overlay-title" id="pageOverlayTitle"></h2>
+    </div>
+    <div class="page-overlay-content" id="pageOverlayContent">
+      <p class="page-overlay-placeholder" data-ru="Контент страницы загружается здесь..." data-en="Page content loads here...">Контент страницы загружается здесь...</p>
+    </div>
+  </div>
+</div>
+
 <!-- ═══ ОСНОВНОЕ СОДЕРЖИМОЕ ═══ -->
 <main class="container">
 
@@ -173,17 +182,17 @@
       <h2 data-ru="Гайды для новых игроков" data-en="New Player Guides">Гайды для новых игроков</h2>
     </div>
     <div class="links-grid">
-      <a class="guide-link" href="https://hellhades.com/raid/new-player-promo-link-generator/" target="_blank"><i class="fa-solid fa-link"></i> <span data-ru="Генератор ссылок для новичков" data-en="New Player Link Generator">Генератор ссылок для новичков</span></a>
-      <a class="guide-link" href="https://hellhades.com/raid/new-player-guide/" target="_blank"><i class="fa-solid fa-book-open"></i> <span data-ru="Начало игры в Raid" data-en="Getting Started in Raid">Начало игры в Raid</span></a>
-      <a class="guide-link" href="https://hellhades.com/guide-to-affinity-raid-shadow-legends/" target="_blank"><i class="fa-solid fa-yin-yang"></i> <span data-ru="Руководство по аффинити" data-en="Guide to Affinity">Руководство по аффинити</span></a>
-      <a class="guide-link" href="https://hellhades.com/raid/guide-to-champion-ascension/" target="_blank"><i class="fa-solid fa-arrow-up-right-dots"></i> <span data-ru="Вознесение чемпионов" data-en="Champion Ascension">Вознесение чемпионов</span></a>
-      <a class="guide-link" href="https://hellhades.com/raid-shadow-legends-debuffs-buffs/" target="_blank"><i class="fa-solid fa-wand-sparkles"></i> <span data-ru="Баффы и дебаффы" data-en="Buffs and Debuffs">Баффы и дебаффы</span></a>
-      <a class="guide-link" href="https://hellhades.com/who-should-i-pick-for-my-next-level-60-champion/" target="_blank"><i class="fa-solid fa-medal"></i> <span data-ru="Кого прокачать до 60?" data-en="Who should I 60 next?">Кого прокачать до 60?</span></a>
-      <a class="guide-link" href="https://hellhades.com/raid-shadow-legends-daily-login-champions/" target="_blank"><i class="fa-solid fa-calendar-check"></i> <span data-ru="Ежедневные чемпионы входа" data-en="Daily Login Champions">Ежедневные чемпионы входа</span></a>
-      <a class="guide-link" href="https://hellhades.com/the-arbiter-missions-and-rewards/" target="_blank"><i class="fa-solid fa-chess-knight"></i> <span data-ru="Миссии Арбитра" data-en="Arbiter Missions">Миссии Арбитра</span></a>
-      <a class="guide-link" href="https://hellhades.com/ramantu-drakesblood-missions/" target="_blank"><i class="fa-solid fa-r"></i> <span data-ru="Миссии Рамантуша" data-en="Ramantu Missions">Миссии Рамантуша</span></a>
-      <a class="guide-link" href="https://hellhades.com/marius-the-gallant-progress-mission-breakdown/" target="_blank"><i class="fa-solid fa-m"></i> <span data-ru="Миссии Мариуса" data-en="Marius Missions">Миссии Мариуса</span></a>
-      <a class="guide-link hot" href="https://hellhades.com/raid-shadow-legends-promo-codes/" target="_blank"><i class="fa-solid fa-tag"></i> <span data-ru="Промо-коды" data-en="Promo Codes">Промо-коды</span> <span class="badge-hot">🔥</span></a>
+      <button class="guide-link" data-page="new-player-promo-link-generator" data-icon="fa-link"><i class="fa-solid fa-link"></i> <span data-ru="Генератор ссылок для новичков" data-en="New Player Link Generator">Генератор ссылок для новичков</span></button>
+      <button class="guide-link" data-page="new-player-guide" data-icon="fa-book-open"><i class="fa-solid fa-book-open"></i> <span data-ru="Начало игры в Raid" data-en="Getting Started in Raid">Начало игры в Raid</span></button>
+      <button class="guide-link" data-page="guide-to-affinity" data-icon="fa-yin-yang"><i class="fa-solid fa-yin-yang"></i> <span data-ru="Руководство по аффинити" data-en="Guide to Affinity">Руководство по аффинити</span></button>
+      <button class="guide-link" data-page="champion-ascension" data-icon="fa-arrow-up-right-dots"><i class="fa-solid fa-arrow-up-right-dots"></i> <span data-ru="Вознесение чемпионов" data-en="Champion Ascension">Вознесение чемпионов</span></button>
+      <button class="guide-link" data-page="buffs-debuffs" data-icon="fa-wand-sparkles"><i class="fa-solid fa-wand-sparkles"></i> <span data-ru="Баффы и дебаффы" data-en="Buffs and Debuffs">Баффы и дебаффы</span></button>
+      <button class="guide-link" data-page="who-to-60" data-icon="fa-medal"><i class="fa-solid fa-medal"></i> <span data-ru="Кого прокачать до 60?" data-en="Who should I 60 next?">Кого прокачать до 60?</span></button>
+      <button class="guide-link" data-page="daily-login-champions" data-icon="fa-calendar-check"><i class="fa-solid fa-calendar-check"></i> <span data-ru="Ежедневные чемпионы входа" data-en="Daily Login Champions">Ежедневные чемпионы входа</span></button>
+      <button class="guide-link" data-page="arbiter-missions" data-icon="fa-chess-knight"><i class="fa-solid fa-chess-knight"></i> <span data-ru="Миссии Арбитра" data-en="Arbiter Missions">Миссии Арбитра</span></button>
+      <button class="guide-link" data-page="ramantu-missions" data-icon="fa-r"><i class="fa-solid fa-r"></i> <span data-ru="Миссии Рамантуша" data-en="Ramantu Missions">Миссии Рамантуша</span></button>
+      <button class="guide-link" data-page="marius-missions" data-icon="fa-m"><i class="fa-solid fa-m"></i> <span data-ru="Миссии Мариуса" data-en="Marius Missions">Миссии Мариуса</span></button>
+      <button class="guide-link hot" data-page="promo-codes" data-icon="fa-tag"><i class="fa-solid fa-tag"></i> <span data-ru="Промо-коды" data-en="Promo Codes">Промо-коды</span> <span class="badge-hot">🔥</span></button>
     </div>
   </section>
 
@@ -194,16 +203,16 @@
       <h2 data-ru="Гайды и Tier-листы" data-en="Guides & Tier Lists">Гайды и Tier-листы</h2>
     </div>
     <div class="links-grid">
-      <a class="guide-link hot" href="https://hellhades.com/raid/tier-list/" target="_blank"><i class="fa-solid fa-trophy"></i> <span data-ru="Tier-лист чемпионов" data-en="Champion Tier List">Tier-лист чемпионов</span> <span class="badge-hot">🔥</span></a>
-      <a class="guide-link" href="https://hellhades.com/raid/faction-wars-tier-list/" target="_blank"><i class="fa-solid fa-shield-halved"></i> <span data-ru="Tier-листы по Войне фракций" data-en="Faction Wars Tier Lists">Tier-листы по Войне фракций</span></a>
-      <a class="guide-link new" href="https://hellhades.com/raid/blessings-tier-list/" target="_blank"><i class="fa-solid fa-star"></i> <span data-ru="Tier-лист благословений" data-en="Blessings Tier List">Tier-лист благословений</span> <span class="badge-new">NEW</span></a>
-      <a class="guide-link" href="https://hellhades.com/blessings-guide-choosing-blessings-for-a-team/" target="_blank"><i class="fa-solid fa-users"></i> <span data-ru="Конструктор команды благословений" data-en="Blessings Team Builder">Конструктор команды благословений</span></a>
-      <a class="guide-link" href="https://hellhades.com/raid-shadow-legends-relic-tier-list/" target="_blank"><i class="fa-solid fa-gem"></i> <span data-ru="Tier-лист реликвий" data-en="Relic Tier List">Tier-лист реликвий</span> <span class="badge-hot">🔥</span></a>
-      <a class="guide-link" href="https://hellhades.com/raid/artifact-tier-list/" target="_blank"><i class="fa-solid fa-shield"></i> <span data-ru="Tier-листы артефактов" data-en="Artifact Tier Lists">Tier-листы артефактов</span></a>
-      <a class="guide-link" href="https://hellhades.com/guaranteed-champion-summons/" target="_blank"><i class="fa-solid fa-hourglass-half"></i> <span data-ru="Прошлые гарантированные чемпионы" data-en="Past Guaranteed Champions">Прошлые гарантированные чемпионы</span></a>
-      <a class="guide-link" href="https://hellhades.com/raid/champion-fusions/" target="_blank"><i class="fa-solid fa-calendar-days"></i> <span data-ru="Прошлые Fusion-события" data-en="Past Fusion Events">Прошлые Fusion-события</span></a>
-      <a class="guide-link" href="https://hellhades.com/be-prepared-for-the-next-fusion-event/" target="_blank"><i class="fa-solid fa-object-group"></i> <span data-ru="Подготовка к Fusion" data-en="Preparing for Fusions">Подготовка к Fusion</span></a>
-      <a class="guide-link" href="https://hellhades.com/defining-your-stage-of-raid-shadow-legends-and-progress-priorities/" target="_blank"><i class="fa-solid fa-chart-line"></i> <span data-ru="Определи свой прогресс" data-en="Defining Your Progress">Определи свой прогресс</span></a>
+      <button class="guide-link hot" data-page="tier-list" data-icon="fa-trophy"><i class="fa-solid fa-trophy"></i> <span data-ru="Tier-лист чемпионов" data-en="Champion Tier List">Tier-лист чемпионов</span> <span class="badge-hot">🔥</span></button>
+      <button class="guide-link" data-page="faction-wars-tier-list" data-icon="fa-shield-halved"><i class="fa-solid fa-shield-halved"></i> <span data-ru="Tier-листы по Войне фракций" data-en="Faction Wars Tier Lists">Tier-листы по Войне фракций</span></button>
+      <button class="guide-link new" data-page="blessings-tier-list" data-icon="fa-star"><i class="fa-solid fa-star"></i> <span data-ru="Tier-лист благословений" data-en="Blessings Tier List">Tier-лист благословений</span> <span class="badge-new">NEW</span></button>
+      <button class="guide-link" data-page="blessings-team-builder" data-icon="fa-users"><i class="fa-solid fa-users"></i> <span data-ru="Конструктор команды благословений" data-en="Blessings Team Builder">Конструктор команды благословений</span></button>
+      <button class="guide-link" data-page="relic-tier-list" data-icon="fa-gem"><i class="fa-solid fa-gem"></i> <span data-ru="Tier-лист реликвий" data-en="Relic Tier List">Tier-лист реликвий</span> <span class="badge-hot">🔥</span></button>
+      <button class="guide-link" data-page="artifact-tier-list" data-icon="fa-shield"><i class="fa-solid fa-shield"></i> <span data-ru="Tier-листы артефактов" data-en="Artifact Tier Lists">Tier-листы артефактов</span></button>
+      <button class="guide-link" data-page="guaranteed-champion-summons" data-icon="fa-hourglass-half"><i class="fa-solid fa-hourglass-half"></i> <span data-ru="Прошлые гарантированные чемпионы" data-en="Past Guaranteed Champions">Прошлые гарантированные чемпионы</span></button>
+      <button class="guide-link" data-page="champion-fusions" data-icon="fa-calendar-days"><i class="fa-solid fa-calendar-days"></i> <span data-ru="Прошлые Fusion-события" data-en="Past Fusion Events">Прошлые Fusion-события</span></button>
+      <button class="guide-link" data-page="preparing-for-fusion" data-icon="fa-object-group"><i class="fa-solid fa-object-group"></i> <span data-ru="Подготовка к Fusion" data-en="Preparing for Fusions">Подготовка к Fusion</span></button>
+      <button class="guide-link" data-page="defining-progress" data-icon="fa-chart-line"><i class="fa-solid fa-chart-line"></i> <span data-ru="Определи свой прогресс" data-en="Defining Your Progress">Определи свой прогресс</span></button>
     </div>
   </section>
 
@@ -214,18 +223,18 @@
       <h2 data-ru="Подземелья и Клан-Босс" data-en="Dungeons & Clan Boss">Подземелья и Клан-Босс</h2>
     </div>
     <div class="links-grid">
-      <a class="guide-link hot" href="https://hellhades.com/hellhades-guide-to-clan-boss/" target="_blank"><i class="fa-solid fa-skull"></i> <span data-ru="Гайд по Клан-Боссу" data-en="Guide to Clan Boss">Гайд по Клан-Боссу</span> <span class="badge-hot">🔥</span></a>
-      <a class="guide-link new" href="https://hellhades.com/raid/boss-guide/chimera/" target="_blank"><i class="fa-solid fa-dragon"></i> <span data-ru="Гайд по Химере" data-en="Guide to Chimera Boss">Гайд по Химере</span> <span class="badge-new">NEW</span></a>
-      <a class="guide-link" href="https://hellhades.com/what-is-a-speed-tuned-clan-boss-team-in-raid-shadow-legends/" target="_blank"><i class="fa-solid fa-gauge-high"></i> <span data-ru="Speed-тюн команды" data-en="Speed Tuned Team">Speed-тюн команды</span></a>
-      <a class="guide-link" href="https://hellhades.com/raid/boss-guide/hellrazor-the-dragon/" target="_blank"><i class="fa-solid fa-fire"></i> <span data-ru="Дракон (подземелье)" data-en="Dragon Dungeon">Дракон (подземелье)</span></a>
-      <a class="guide-link" href="https://hellhades.com/raid/boss-guide/fyro-the-fire-knight/" target="_blank"><i class="fa-solid fa-fire-flame-curved"></i> <span data-ru="Огненный Рыцарь" data-en="Fire-Knight">Огненный Рыцарь</span></a>
-      <a class="guide-link" href="https://hellhades.com/raid/boss-guide/skavag-the-spider-queen/" target="_blank"><i class="fa-solid fa-spider"></i> <span data-ru="Паучья Королева" data-en="Spider Dungeon">Паучья Королева</span></a>
-      <a class="guide-link" href="https://hellhades.com/raid/boss-guide/klyssus-the-ice-golem/" target="_blank"><i class="fa-solid fa-snowflake"></i> <span data-ru="Ледяной Голем" data-en="Ice Golem">Ледяной Голем</span></a>
-      <a class="guide-link" href="https://hellhades.com/raid/boss-guide/minotaur/" target="_blank"><i class="fa-solid fa-horse"></i> <span data-ru="Минотавр" data-en="Minotaur">Минотавр</span></a>
-      <a class="guide-link" href="https://hellhades.com/raid/boss-guide/iron-twins-fortress/" target="_blank"><i class="fa-solid fa-people-group"></i> <span data-ru="Железные Близнецы" data-en="Iron Twins">Железные Близнецы</span></a>
-      <a class="guide-link" href="https://hellhades.com/raid/boss-guide/akumori-the-phantom-shogun/" target="_blank"><i class="fa-solid fa-torii-gate"></i> <span data-ru="Призрачная Роща" data-en="Phantom Grove">Призрачная Роща</span></a>
-      <a class="guide-link" href="https://hellhades.com/raid/boss-guide/al-naemeh-the-sand-devil/" target="_blank"><i class="fa-solid fa-sun"></i> <span data-ru="Песчаный Дьявол" data-en="Sand Devil">Песчаный Дьявол</span></a>
-      <a class="guide-link" href="https://hellhades.com/raid/boss-guide/event-dungeon/" target="_blank"><i class="fa-solid fa-calendar-star"></i> <span data-ru="Событийное подземелье" data-en="Event Dungeon">Событийное подземелье</span></a>
+      <button class="guide-link hot" data-page="clan-boss-guide" data-icon="fa-skull"><i class="fa-solid fa-skull"></i> <span data-ru="Гайд по Клан-Боссу" data-en="Guide to Clan Boss">Гайд по Клан-Боссу</span> <span class="badge-hot">🔥</span></button>
+      <button class="guide-link new" data-page="chimera-guide" data-icon="fa-dragon"><i class="fa-solid fa-dragon"></i> <span data-ru="Гайд по Химере" data-en="Guide to Chimera Boss">Гайд по Химере</span> <span class="badge-new">NEW</span></button>
+      <button class="guide-link" data-page="speed-tuned-team" data-icon="fa-gauge-high"><i class="fa-solid fa-gauge-high"></i> <span data-ru="Speed-тюн команды" data-en="Speed Tuned Team">Speed-тюн команды</span></button>
+      <button class="guide-link" data-page="dragon-dungeon" data-icon="fa-fire"><i class="fa-solid fa-fire"></i> <span data-ru="Дракон (подземелье)" data-en="Dragon Dungeon">Дракон (подземелье)</span></button>
+      <button class="guide-link" data-page="fire-knight" data-icon="fa-fire-flame-curved"><i class="fa-solid fa-fire-flame-curved"></i> <span data-ru="Огненный Рыцарь" data-en="Fire-Knight">Огненный Рыцарь</span></button>
+      <button class="guide-link" data-page="spider-dungeon" data-icon="fa-spider"><i class="fa-solid fa-spider"></i> <span data-ru="Паучья Королева" data-en="Spider Dungeon">Паучья Королева</span></button>
+      <button class="guide-link" data-page="ice-golem" data-icon="fa-snowflake"><i class="fa-solid fa-snowflake"></i> <span data-ru="Ледяной Голем" data-en="Ice Golem">Ледяной Голем</span></button>
+      <button class="guide-link" data-page="minotaur" data-icon="fa-horse"><i class="fa-solid fa-horse"></i> <span data-ru="Минотавр" data-en="Minotaur">Минотавр</span></button>
+      <button class="guide-link" data-page="iron-twins" data-icon="fa-people-group"><i class="fa-solid fa-people-group"></i> <span data-ru="Железные Близнецы" data-en="Iron Twins">Железные Близнецы</span></button>
+      <button class="guide-link" data-page="phantom-grove" data-icon="fa-torii-gate"><i class="fa-solid fa-torii-gate"></i> <span data-ru="Призрачная Роща" data-en="Phantom Grove">Призрачная Роща</span></button>
+      <button class="guide-link" data-page="sand-devil" data-icon="fa-sun"><i class="fa-solid fa-sun"></i> <span data-ru="Песчаный Дьявол" data-en="Sand Devil">Песчаный Дьявол</span></button>
+      <button class="guide-link" data-page="event-dungeon" data-icon="fa-calendar-star"><i class="fa-solid fa-calendar-star"></i> <span data-ru="Событийное подземелье" data-en="Event Dungeon">Событийное подземелье</span></button>
     </div>
   </section>
 
@@ -237,24 +246,24 @@
     </div>
     <div class="factions-wrap">
       <div class="factions-col">
-        <a class="faction-link" href="https://hellhades.com/raid/factions/banner-lords/" target="_blank"><i class="fa-solid fa-flag"></i> <span data-ru="Знаменосцы" data-en="Banner Lords">Знаменосцы</span></a>
-        <a class="faction-link" href="https://hellhades.com/raid/factions/high-elves/" target="_blank"><i class="fa-solid fa-leaf"></i> <span data-ru="Высшие Эльфы" data-en="High Elves">Высшие Эльфы</span></a>
-        <a class="faction-link" href="https://hellhades.com/raid/factions/the-sacred-order/" target="_blank"><i class="fa-solid fa-cross"></i> <span data-ru="Священный Орден" data-en="Sacred Order">Священный Орден</span></a>
-        <a class="faction-link" href="https://hellhades.com/raid/factions/barbarians/" target="_blank"><i class="fa-solid fa-axe"></i> <span data-ru="Варвары" data-en="Barbarians">Варвары</span></a>
-        <a class="faction-link" href="https://hellhades.com/raid/factions/ogryn-tribes/" target="_blank"><i class="fa-solid fa-fist-raised"></i> <span data-ru="Племена Огрынов" data-en="Ogryn Tribes">Племена Огрынов</span></a>
-        <a class="faction-link" href="https://hellhades.com/raid/factions/lizardmen/" target="_blank"><i class="fa-solid fa-dragon"></i> <span data-ru="Ящеролюди" data-en="Lizardmen">Ящеролюди</span></a>
-        <a class="faction-link" href="https://hellhades.com/raid/factions/skinwalkers/" target="_blank"><i class="fa-solid fa-paw"></i> <span data-ru="Скинволкеры" data-en="Skinwalkers">Скинволкеры</span></a>
-        <a class="faction-link" href="https://hellhades.com/raid/factions/orcs/" target="_blank"><i class="fa-solid fa-khanda"></i> <span data-ru="Орки" data-en="Orcs">Орки</span></a>
+        <button class="faction-link" data-page="faction-banner-lords" data-icon-img="icon1.png"><img src="icon1.png" class="faction-img" alt="Знаменосцы"> <span data-ru="Знаменосцы" data-en="Banner Lords">Знаменосцы</span></button>
+        <button class="faction-link" data-page="faction-high-elves" data-icon-img="icon2.png"><img src="icon2.png" class="faction-img" alt="Высшие Эльфы"> <span data-ru="Высшие Эльфы" data-en="High Elves">Высшие Эльфы</span></button>
+        <button class="faction-link" data-page="faction-sacred-order" data-icon-img="icon3.png"><img src="icon3.png" class="faction-img" alt="Священный Орден"> <span data-ru="Священный Орден" data-en="Sacred Order">Священный Орден</span></button>
+        <button class="faction-link" data-page="faction-barbarians" data-icon-img="icon4.png"><img src="icon4.png" class="faction-img" alt="Варвары"> <span data-ru="Варвары" data-en="Barbarians">Варвары</span></button>
+        <button class="faction-link" data-page="faction-ogryn-tribes" data-icon-img="icon5.png"><img src="icon5.png" class="faction-img" alt="Племена Огрынов"> <span data-ru="Племена Огрынов" data-en="Ogryn Tribes">Племена Огрынов</span></button>
+        <button class="faction-link" data-page="faction-lizardmen" data-icon-img="icon6.png"><img src="icon6.png" class="faction-img" alt="Ящеролюди"> <span data-ru="Ящеролюди" data-en="Lizardmen">Ящеролюди</span></button>
+        <button class="faction-link" data-page="faction-skinwalkers" data-icon-img="icon7.png"><img src="icon7.png" class="faction-img" alt="Скинволкеры"> <span data-ru="Скинволкеры" data-en="Skinwalkers">Скинволкеры</span></button>
+        <button class="faction-link" data-page="faction-orcs" data-icon-img="icon8.png"><img src="icon8.png" class="faction-img" alt="Орки"> <span data-ru="Орки" data-en="Orcs">Орки</span></button>
       </div>
       <div class="factions-col">
-        <a class="faction-link" href="https://hellhades.com/raid/factions/demonspawn/" target="_blank"><i class="fa-solid fa-skull-crossbones"></i> <span data-ru="Отродья Демонов" data-en="Demonspawn">Отродья Демонов</span></a>
-        <a class="faction-link" href="https://hellhades.com/raid/factions/undead-hordes/" target="_blank"><i class="fa-solid fa-skull"></i> <span data-ru="Нежить" data-en="Undead Hordes">Нежить</span></a>
-        <a class="faction-link" href="https://hellhades.com/raid/factions/dark-elves/" target="_blank"><i class="fa-solid fa-moon"></i> <span data-ru="Тёмные Эльфы" data-en="Dark Elves">Тёмные Эльфы</span></a>
-        <a class="faction-link" href="https://hellhades.com/raid/factions/knights-revenant/" target="_blank"><i class="fa-solid fa-chess-knight"></i> <span data-ru="Рыцари Ревенанты" data-en="Knights Revenant">Рыцари Ревенанты</span></a>
-        <a class="faction-link" href="https://hellhades.com/raid/factions/dwarves/" target="_blank"><i class="fa-solid fa-hammer"></i> <span data-ru="Дварфы" data-en="Dwarves">Дварфы</span></a>
-        <a class="faction-link" href="https://hellhades.com/raid/factions/shadowkin/" target="_blank"><i class="fa-solid fa-ghost"></i> <span data-ru="Теневой Народ" data-en="Shadowkin">Теневой Народ</span></a>
-        <a class="faction-link" href="https://hellhades.com/raid/factions/sylvan-watchers/" target="_blank"><i class="fa-solid fa-tree"></i> <span data-ru="Лесные Стражи" data-en="Sylvan Watchers">Лесные Стражи</span></a>
-        <a class="faction-link new" href="https://hellhades.com/raid/factions/argonites/" target="_blank"><i class="fa-solid fa-gem"></i> <span data-ru="Аргониты" data-en="Argonites">Аргониты</span> <span class="badge-new">NEW</span></a>
+        <button class="faction-link" data-page="faction-demonspawn" data-icon-img="icon9.png"><img src="icon9.png" class="faction-img" alt="Отродья Демонов"> <span data-ru="Отродья Демонов" data-en="Demonspawn">Отродья Демонов</span></button>
+        <button class="faction-link" data-page="faction-undead-hordes" data-icon-img="icon10.png"><img src="icon10.png" class="faction-img" alt="Нежить"> <span data-ru="Нежить" data-en="Undead Hordes">Нежить</span></button>
+        <button class="faction-link" data-page="faction-dark-elves" data-icon-img="icon11.png"><img src="icon11.png" class="faction-img" alt="Тёмные Эльфы"> <span data-ru="Тёмные Эльфы" data-en="Dark Elves">Тёмные Эльфы</span></button>
+        <button class="faction-link" data-page="faction-knights-revenant" data-icon-img="icon12.png"><img src="icon12.png" class="faction-img" alt="Рыцари Ревенанты"> <span data-ru="Рыцари Ревенанты" data-en="Knights Revenant">Рыцари Ревенанты</span></button>
+        <button class="faction-link" data-page="faction-dwarves" data-icon-img="icon13.png"><img src="icon13.png" class="faction-img" alt="Дварфы"> <span data-ru="Дварфы" data-en="Dwarves">Дварфы</span></button>
+        <button class="faction-link" data-page="faction-shadowkin" data-icon-img="icon14.png"><img src="icon14.png" class="faction-img" alt="Теневой Народ"> <span data-ru="Теневой Народ" data-en="Shadowkin">Теневой Народ</span></button>
+        <button class="faction-link" data-page="faction-sylvan-watchers" data-icon-img="icon15.png"><img src="icon15.png" class="faction-img" alt="Лесные Стражи"> <span data-ru="Лесные Стражи" data-en="Sylvan Watchers">Лесные Стражи</span></button>
+        <button class="faction-link new" data-page="faction-argonites" data-icon-img="icon16.png"><img src="icon16.png" class="faction-img" alt="Аргониты"> <span data-ru="Аргониты" data-en="Argonites">Аргониты</span> <span class="badge-new">NEW</span></button>
       </div>
     </div>
   </section>
@@ -266,11 +275,11 @@
       <h2 data-ru="Башня Рока" data-en="Doom Tower">Башня Рока</h2>
     </div>
     <div class="links-grid">
-      <a class="guide-link" href="https://hellhades.com/doom-tower/" target="_blank"><i class="fa-solid fa-tower-observation"></i> <span data-ru="Гайд по Башне Рока" data-en="Doom Tower Guide">Гайд по Башне Рока</span></a>
-      <a class="guide-link" href="https://hellhades.com/doom-tower-rotations/" target="_blank"><i class="fa-solid fa-rotate"></i> <span data-ru="Ротации Башни Рока" data-en="Doom Tower Rotations">Ротации Башни Рока</span></a>
-      <a class="guide-link" href="https://hellhades.com/doom-tower-secret-rooms/" target="_blank"><i class="fa-solid fa-door-open"></i> <span data-ru="Секретные комнаты" data-en="Secret Rooms">Секретные комнаты</span></a>
-      <a class="guide-link" href="https://hellhades.com/doom-tower-bosses/" target="_blank"><i class="fa-solid fa-skull"></i> <span data-ru="Боссы Башни Рока" data-en="Doom Tower Bosses">Боссы Башни Рока</span></a>
-      <a class="guide-link" href="https://hellhades.com/doom-tower-artifact-sets/" target="_blank"><i class="fa-solid fa-shield"></i> <span data-ru="Сеты артефактов Башни" data-en="Doom Tower Artifact Sets">Сеты артефактов Башни</span></a>
+      <button class="guide-link" data-page="doom-tower-guide" data-icon="fa-tower-observation"><i class="fa-solid fa-tower-observation"></i> <span data-ru="Гайд по Башне Рока" data-en="Doom Tower Guide">Гайд по Башне Рока</span></button>
+      <button class="guide-link" data-page="doom-tower-rotations" data-icon="fa-rotate"><i class="fa-solid fa-rotate"></i> <span data-ru="Ротации Башни Рока" data-en="Doom Tower Rotations">Ротации Башни Рока</span></button>
+      <button class="guide-link" data-page="doom-tower-secret-rooms" data-icon="fa-door-open"><i class="fa-solid fa-door-open"></i> <span data-ru="Секретные комнаты" data-en="Secret Rooms">Секретные комнаты</span></button>
+      <button class="guide-link" data-page="doom-tower-bosses" data-icon="fa-skull"><i class="fa-solid fa-skull"></i> <span data-ru="Боссы Башни Рока" data-en="Doom Tower Bosses">Боссы Башни Рока</span></button>
+      <button class="guide-link" data-page="doom-tower-artifact-sets" data-icon="fa-shield"><i class="fa-solid fa-shield"></i> <span data-ru="Сеты артефактов Башни" data-en="Doom Tower Artifact Sets">Сеты артефактов Башни</span></button>
     </div>
   </section>
 
@@ -281,11 +290,11 @@
       <h2 data-ru="Гидра Клан-Босс" data-en="Hydra Clan Boss">Гидра Клан-Босс</h2>
     </div>
     <div class="links-grid">
-      <a class="guide-link hot" href="https://hellhades.com/hydra-clan-boss-guide/" target="_blank"><i class="fa-solid fa-skull"></i> <span data-ru="Гайд по Гидре" data-en="Hydra Clan Boss Guide">Гайд по Гидре</span> <span class="badge-hot">🔥</span></a>
-      <a class="guide-link" href="https://hellhades.com/getting-started-with-hydra-clan-boss-in-raid-shadow-legends/" target="_blank"><i class="fa-solid fa-play"></i> <span data-ru="Первые шаги с Гидрой" data-en="Getting Started With Hydra">Первые шаги с Гидрой</span></a>
-      <a class="guide-link" href="https://hellhades.com/hydra-clan-boss-heads/" target="_blank"><i class="fa-solid fa-circle-nodes"></i> <span data-ru="Головы Гидры" data-en="Hydra Clan Boss Heads">Головы Гидры</span></a>
-      <a class="guide-link" href="https://hellhades.com/hydra-clan-boss-rewards/" target="_blank"><i class="fa-solid fa-gift"></i> <span data-ru="Награды Гидры" data-en="Hydra Clan Boss Rewards">Награды Гидры</span></a>
-      <a class="guide-link" href="https://hellhades.com/the-best-blessings-for-hydra-clan-boss/" target="_blank"><i class="fa-solid fa-star"></i> <span data-ru="Лучшие благословения для Гидры" data-en="Best Blessings for Hydra">Лучшие благословения для Гидры</span></a>
+      <button class="guide-link hot" data-page="hydra-guide" data-icon="fa-skull"><i class="fa-solid fa-skull"></i> <span data-ru="Гайд по Гидре" data-en="Hydra Clan Boss Guide">Гайд по Гидре</span> <span class="badge-hot">🔥</span></button>
+      <button class="guide-link" data-page="hydra-getting-started" data-icon="fa-play"><i class="fa-solid fa-play"></i> <span data-ru="Первые шаги с Гидрой" data-en="Getting Started With Hydra">Первые шаги с Гидрой</span></button>
+      <button class="guide-link" data-page="hydra-heads" data-icon="fa-circle-nodes"><i class="fa-solid fa-circle-nodes"></i> <span data-ru="Головы Гидры" data-en="Hydra Clan Boss Heads">Головы Гидры</span></button>
+      <button class="guide-link" data-page="hydra-rewards" data-icon="fa-gift"><i class="fa-solid fa-gift"></i> <span data-ru="Награды Гидры" data-en="Hydra Clan Boss Rewards">Награды Гидры</span></button>
+      <button class="guide-link" data-page="hydra-blessings" data-icon="fa-star"><i class="fa-solid fa-star"></i> <span data-ru="Лучшие благословения для Гидры" data-en="Best Blessings for Hydra">Лучшие благословения для Гидры</span></button>
     </div>
   </section>
 
@@ -296,10 +305,10 @@
       <h2 data-ru="Проклятый Город Синтранос" data-en="Cursed City of Sintranos">Проклятый Город Синтранос</h2>
     </div>
     <div class="links-grid">
-      <a class="guide-link" href="https://hellhades.com/raid/cursed-city-of-sintranos/" target="_blank"><i class="fa-solid fa-route"></i> <span data-ru="Тур по Синтраносу" data-en="Sintranos Tour Guide">Тур по Синтраносу</span></a>
-      <a class="guide-link" href="https://hellhades.com/sintranos-the-cursed-city-rotation-1-normal-mode/" target="_blank"><i class="fa-solid fa-list-check"></i> <span data-ru="Ограничения (обычный режим)" data-en="Normal Mode Restrictions">Ограничения (обычный режим)</span></a>
-      <a class="guide-link" href="https://hellhades.com/sintranos-the-cursed-city-rotation-1-hard-mode/" target="_blank"><i class="fa-solid fa-triangle-exclamation"></i> <span data-ru="Ограничения (сложный режим)" data-en="Hard Mode Restrictions">Ограничения (сложный режим)</span></a>
-      <a class="guide-link" href="https://hellhades.com/raid/boss-guide/amius-the-lunar-archon/" target="_blank"><i class="fa-solid fa-moon"></i> <span data-ru="Босс Амиус — Лунный Архон" data-en="Amius the Lunar Archon Boss">Босс Амиус — Лунный Архон</span></a>
+      <button class="guide-link" data-page="sintranos-tour" data-icon="fa-route"><i class="fa-solid fa-route"></i> <span data-ru="Тур по Синтраносу" data-en="Sintranos Tour Guide">Тур по Синтраносу</span></button>
+      <button class="guide-link" data-page="sintranos-normal" data-icon="fa-list-check"><i class="fa-solid fa-list-check"></i> <span data-ru="Ограничения (обычный режим)" data-en="Normal Mode Restrictions">Ограничения (обычный режим)</span></button>
+      <button class="guide-link" data-page="sintranos-hard" data-icon="fa-triangle-exclamation"><i class="fa-solid fa-triangle-exclamation"></i> <span data-ru="Ограничения (сложный режим)" data-en="Hard Mode Restrictions">Ограничения (сложный режим)</span></button>
+      <button class="guide-link" data-page="amius-boss" data-icon="fa-moon"><i class="fa-solid fa-moon"></i> <span data-ru="Босс Амиус — Лунный Архон" data-en="Amius the Lunar Archon Boss">Босс Амиус — Лунный Архон</span></button>
     </div>
   </section>
 
@@ -310,13 +319,13 @@
       <h2 data-ru="Инструменты и Калькуляторы" data-en="Tools & Calculators">Инструменты и Калькуляторы</h2>
     </div>
     <div class="links-grid">
-      <a class="guide-link" href="https://hellhades.com/useful-tools-for-raid-shadow-legends/" target="_blank"><i class="fa-solid fa-toolbox"></i> <span data-ru="Все инструменты Raid" data-en="All Raid Tools">Все инструменты Raid</span></a>
-      <a class="guide-link hot" href="https://hellhades.com/raid/stages-tool/" target="_blank"><i class="fa-solid fa-map-location-dot"></i> <span data-ru="Инструмент этапов Raid" data-en="Raid Stages Tool">Инструмент этапов Raid</span> <span class="badge-hot">🔥</span></a>
-      <a class="guide-link" href="https://hellhades.com/raid/pack-offer-calculator/" target="_blank"><i class="fa-solid fa-box-open"></i> <span data-ru="Калькулятор акционных предложений" data-en="Pack Offer Calculator">Калькулятор акционных предложений</span></a>
-      <a class="guide-link" href="https://hellhades.com/raid/clan-vs-clan-calculator/" target="_blank"><i class="fa-solid fa-users-between-lines"></i> <span data-ru="Калькулятор Клан vs Клан" data-en="Clan vs Clan Calculator">Калькулятор Клан vs Клан</span></a>
-      <a class="guide-link" href="https://hellhades.com/ehp-efficiency-calculator/" target="_blank"><i class="fa-solid fa-shield-virus"></i> <span data-ru="Калькулятор EHP (эффективных HP)" data-en="EHP Efficiency Calculator">Калькулятор EHP</span></a>
-      <a class="guide-link" href="https://hellhades.com/raid/damage-efficiency/" target="_blank"><i class="fa-solid fa-chart-bar"></i> <span data-ru="Эффективность урона" data-en="Damage Efficiency Tool">Эффективность урона</span></a>
-      <a class="guide-link" href="https://hellhades.com/clan-boss-chest-simulator/" target="_blank"><i class="fa-solid fa-treasure-chest"></i> <span data-ru="Симулятор сундука Клан-Босса" data-en="Clan Boss Chest Simulator">Симулятор сундука Клан-Босса</span></a>
+      <button class="guide-link" data-page="all-tools" data-icon="fa-toolbox"><i class="fa-solid fa-toolbox"></i> <span data-ru="Все инструменты Raid" data-en="All Raid Tools">Все инструменты Raid</span></button>
+      <button class="guide-link hot" data-page="stages-tool" data-icon="fa-map-location-dot"><i class="fa-solid fa-map-location-dot"></i> <span data-ru="Инструмент этапов Raid" data-en="Raid Stages Tool">Инструмент этапов Raid</span> <span class="badge-hot">🔥</span></button>
+      <button class="guide-link" data-page="pack-offer-calculator" data-icon="fa-box-open"><i class="fa-solid fa-box-open"></i> <span data-ru="Калькулятор акционных предложений" data-en="Pack Offer Calculator">Калькулятор акционных предложений</span></button>
+      <button class="guide-link" data-page="clan-vs-clan-calculator" data-icon="fa-users-between-lines"><i class="fa-solid fa-users-between-lines"></i> <span data-ru="Калькулятор Клан vs Клан" data-en="Clan vs Clan Calculator">Калькулятор Клан vs Клан</span></button>
+      <button class="guide-link" data-page="ehp-calculator" data-icon="fa-shield-virus"><i class="fa-solid fa-shield-virus"></i> <span data-ru="Калькулятор EHP (эффективных HP)" data-en="EHP Efficiency Calculator">Калькулятор EHP</span></button>
+      <button class="guide-link" data-page="damage-efficiency" data-icon="fa-chart-bar"><i class="fa-solid fa-chart-bar"></i> <span data-ru="Эффективность урона" data-en="Damage Efficiency Tool">Эффективность урона</span></button>
+      <button class="guide-link" data-page="clan-boss-chest-simulator" data-icon="fa-treasure-chest"><i class="fa-solid fa-treasure-chest"></i> <span data-ru="Симулятор сундука Клан-Босса" data-en="Clan Boss Chest Simulator">Симулятор сундука Клан-Босса</span></button>
     </div>
   </section>
 
@@ -366,48 +375,6 @@
     </div>
   </section>
 
-  <!-- ─── TIER-ЛИСТ ПРЕВЬЮ ─── -->
-  <section class="section tier-preview-section">
-    <div class="section-header">
-      <div class="section-icon"><i class="fa-solid fa-trophy"></i></div>
-      <h2 data-ru="Tier-лист чемпионов 2026" data-en="Champion Tier List 2026">Tier-лист чемпионов 2026</h2>
-    </div>
-    <p class="section-intro" data-ru="Лучшие чемпионы по версии сообщества — рейтинг учитывает Клан-Босса, Гидру, Башню Рока, Арену и Подземелья." data-en="Top champions by community vote — rating considers Clan Boss, Hydra, Doom Tower, Arena and Dungeons.">Лучшие чемпионы по версии сообщества — рейтинг учитывает Клан-Босса, Гидру, Башню Рока, Арену и Подземелья.</p>
-    <div class="tier-rows">
-      <div class="tier-row">
-        <div class="tier-label tier-s">S</div>
-        <div class="tier-champs">
-          <div class="champ-card"><div class="champ-icon bg-void"><i class="fa-solid fa-crown"></i></div><span>Сифи</span></div>
-          <div class="champ-card"><div class="champ-icon bg-magic"><i class="fa-solid fa-wand-sparkles"></i></div><span>Лидия</span></div>
-          <div class="champ-card"><div class="champ-icon bg-force"><i class="fa-solid fa-fire"></i></div><span>Арбитр</span></div>
-          <div class="champ-card"><div class="champ-icon bg-spirit"><i class="fa-solid fa-ghost"></i></div><span>Герцогиня Лилиту</span></div>
-          <div class="champ-card"><div class="champ-icon bg-void"><i class="fa-solid fa-bolt"></i></div><span>Валькирия</span></div>
-        </div>
-      </div>
-      <div class="tier-row">
-        <div class="tier-label tier-a">A</div>
-        <div class="tier-champs">
-          <div class="champ-card"><div class="champ-icon bg-force"><i class="fa-solid fa-shield"></i></div><span>Урсала</span></div>
-          <div class="champ-card"><div class="champ-icon bg-magic"><i class="fa-solid fa-skull"></i></div><span>Ма'Шаллед</span></div>
-          <div class="champ-card"><div class="champ-icon bg-spirit"><i class="fa-solid fa-star"></i></div><span>Уорлорд</span></div>
-          <div class="champ-card"><div class="champ-icon bg-void"><i class="fa-solid fa-moon"></i></div><span>Митрала</span></div>
-          <div class="champ-card"><div class="champ-icon bg-force"><i class="fa-solid fa-fist-raised"></i></div><span>Гнут</span></div>
-        </div>
-      </div>
-      <div class="tier-row">
-        <div class="tier-label tier-b">B</div>
-        <div class="tier-champs">
-          <div class="champ-card"><div class="champ-icon bg-spirit"><i class="fa-solid fa-leaf"></i></div><span>Скил</span></div>
-          <div class="champ-card"><div class="champ-icon bg-magic"><i class="fa-solid fa-paw"></i></div><span>Торагу</span></div>
-          <div class="champ-card"><div class="champ-icon bg-void"><i class="fa-solid fa-sun"></i></div><span>Паллас</span></div>
-          <div class="champ-card"><div class="champ-icon bg-force"><i class="fa-solid fa-wind"></i></div><span>Деметра</span></div>
-          <div class="champ-card"><div class="champ-icon bg-magic"><i class="fa-solid fa-dragon"></i></div><span>Каель</span></div>
-        </div>
-      </div>
-    </div>
-    <a href="https://hellhades.com/raid/tier-list/" target="_blank" class="btn btn-primary btn-center"><i class="fa-solid fa-list-ul"></i> <span data-ru="Полный Tier-лист на HellHades" data-en="Full Tier List on HellHades">Полный Tier-лист на HellHades</span></a>
-  </section>
-
 </main>
 
 <!-- ═══ FOOTER ═══ -->
@@ -423,7 +390,6 @@
       <a href="#guides">Tier-<span data-ru="лист" data-en="List">лист</span></a>
       <a href="#dungeons" data-ru="Подземелья" data-en="Dungeons">Подземелья</a>
       <a href="#tools" data-ru="Инструменты" data-en="Tools">Инструменты</a>
-      <a href="https://hellhades.com/raid/" target="_blank">HellHades.com</a>
     </div>
     <p class="footer-copy">© 2026 RaidGuide.pro — <span data-ru="Все права защищены" data-en="All rights reserved">Все права защищены</span></p>
   </div>
