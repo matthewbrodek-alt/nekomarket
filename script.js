@@ -670,10 +670,10 @@ const PAGE_CONTENT = {
 
   /* ── ФРАКЦИИ ─────────────────────────────── */
   'faction-banner-lords': {
-    title_ru: 'Банереты',
+    title_ru: 'Баннереты',
     title_en: 'Banner Lords',
     iconImg: 'faction/icon1.jpg',
-    content_ru: '<p>Здесь будет контент страницы «Знаменосцы».</p>',
+    content_ru: '<p>Здесь будет контент страницы «Баннереты».</p>',
     content_en: '<p>Banner Lords page content goes here.</p>',
   },
   'faction-high-elves': {
@@ -701,21 +701,21 @@ const PAGE_CONTENT = {
     title_ru: 'Племена Огринов',
     title_en: 'Ogryn Tribes',
     iconImg: 'faction/icon5.jpg',
-    content_ru: '<p>Здесь будет контент страницы «Племена Огрынов».</p>',
+    content_ru: '<p>Здесь будет контент страницы «Племена Огринов».</p>',
     content_en: '<p>Ogryn Tribes page content goes here.</p>',
   },
   'faction-lizardmen': {
-    title_ru: 'Ящеролюди',
+    title_ru: 'Ящеролюды',
     title_en: 'Lizardmen',
     iconImg: 'faction/icon6.jpg',
-    content_ru: '<p>Здесь будет контент страницы «Ящеролюди».</p>',
+    content_ru: '<p>Здесь будет контент страницы «Ящеролюды».</p>',
     content_en: '<p>Lizardmen page content goes here.</p>',
   },
   'faction-skinwalkers': {
     title_ru: 'Оборотни',
     title_en: 'Skinwalkers',
     iconImg: 'faction/icon7.jpg',
-    content_ru: '<p>Здесь будет контент страницы «Скинволкеры».</p>',
+    content_ru: '<p>Здесь будет контент страницы «Оборотни».</p>',
     content_en: '<p>Skinwalkers page content goes here.</p>',
   },
   'faction-orcs': {
@@ -764,14 +764,14 @@ const PAGE_CONTENT = {
     title_ru: 'Войны сумрака',
     title_en: 'Shadowkin',
     iconImg: 'faction/icon14.jpg',
-    content_ru: '<p>Здесь будет контент страницы «Теневой Народ».</p>',
+    content_ru: '<p>Здесь будет контент страницы «Войны сумрака».</p>',
     content_en: '<p>Shadowkin page content goes here.</p>',
   },
   'faction-sylvan-watchers': {
     title_ru: 'Духи леса',
     title_en: 'Sylvan Watchers',
     iconImg: 'faction/icon15.jpg',
-    content_ru: '<p>Здесь будет контент страницы «Лесные Стражи».</p>',
+    content_ru: '<p>Здесь будет контент страницы «Духи леса».</p>',
     content_en: '<p>Sylvan Watchers page content goes here.</p>',
   },
   'faction-argonites': {
